@@ -1,0 +1,34 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KBZDTG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark justify-content-center">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="{{ site.url }}{{ site.baseurl }}/">
+        <img src="{{ site.url }}{{ site.baseurl }}/favicon.ico" width="30" height="30" style="margin-right:5px" class="d-inline-block align-top" alt="">
+        <b>{{ site.title | escape }}</b>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item dropdown">
+                <li class="nav-item">
+                    <a class="nav-link{% if page.url == '/' %} nav-active{% endif %}" href="{{ site.url }}{{ site.baseurl }}/"><b>Home</b></a>
+                </li>
+                {% for navpage in site.nav_pages %}
+                    <li class="nav-item">
+                        <a class="nav-link{% if page.url contains navpage.name %} nav-active{% endif %}" href="{{ site.url }}{{ site.baseurl }}/{{navpage.name}}"><b>{% if navpage.display %}{{navpage.display}}{% else %}{{navpage.name | capitalize}}{% endif %}</b></a>
+                    </li>
+                {% endfor %}
+                <li class="nav-item">
+                    <a class="nav-link{% if page.url contains 'group-docs' %} nav-active{% endif %}" href="https://docs.google.com/document/d/1tOEkFUuRrjNbbV6ZiNj0htRF0-wEbfPvPkauJ6V4-RU/edit?tab=t.0"><b>Docs</b></a>
+                </li>
+            </li>
+        </ul>
+        <pagefind-modal-trigger compact class="ms-auto nav-search-trigger"></pagefind-modal-trigger>
+    </div>
+    </div>
+</nav>

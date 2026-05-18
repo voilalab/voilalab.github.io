@@ -1,0 +1,73 @@
+themes:
+  - slug: 3d-reconstruction
+    title: "3D reconstruction and representation"
+    thumb: "/images/research/volumetric-render.svg"
+    alt: "Volumetric grid"
+    summary: "TODO: single sentence summary"
+    bullets:
+      - "A"
+      - "B"
+    papers: [grids-vs-inrs, plenoxels, kplanes, thermalnerf, microfacetfields, 3d-field-of-junctions, GA-planes]
+    links:
+      - {text: "Plenoxels", url: "https://github.com/sxyu/svox2"}
+      - {text: "K-Planes", url: "https://github.com/sarafridov/K-Planes"}
+
+  - slug: medical-imaging
+    title: Medical imaging
+    thumb: "/images/research/medical-imaging.svg"
+    alt: "Brain scan and Radon transform"
+    summary: "TODO: single sentence summary"
+    bullets:
+      - "A"
+      - "B"
+    papers: [padis-mri, provable-tr, propeller-mri, perfusion-ct, provable-fast-tr, dab-quant]
+    links:
+      - {text: "", url: ""}
+
+  - slug: foundational-ml
+    title: Machine learning foundations
+    thumb: "/images/research/foundational-ml.svg"
+    alt: "TODO : MLP"
+    summary: "TODO: single sentence summary"
+    bullets:
+      - "A"
+      - "B"
+    papers: [spectral-bias, sparse-nn-recovery, grids-vs-inrs]
+    links:
+      - {text: "", url: ""}
+
+  - slug: generative-priors
+    title: Generative priors for inverse problems
+    thumb: "/images/research/generative-priors.svg"
+    alt: "Diffusion model run on a brain"
+    summary:
+    bullets:
+      - "A"
+      - "B"
+    papers: [padis-mri, shift-with-generative-priors, protein-space-ips]
+    links:
+      - {text: "", url: ""}
+
+  - slug: ood
+    title: Identifying and tackling distribution shift
+    thumb: "/images/research/distribution-shift.svg"
+    alt:
+    summary:
+    bullets:
+      - "A"
+      - "B"
+    papers: [fourier-shift-robustness, mistakes-on-imagenet, shift-with-generative-priors]
+    links:
+      - {text: "", url: ""}
+
+  # - slug: 
+  #   title:
+  #   thumb:
+  #   alt:
+  #   summary:
+  #   bullets:
+  #     - "A"
+  #     - "B"
+  #   papers: []
+  #   links:
+  #     - {text: "", url: ""}

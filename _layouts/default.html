@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    {% include header.html %}
+
+    <div class="container-fluid" id="main-content" data-pagefind-body>
+      <div class="row">
+        {{ content }}
+      </div>
+    </div>
+
+
+    {% include footer.html %}
+
+    {% include search-modal.html %}
+
+    <script type="module" src="{{ site.url }}{{ site.baseurl }}/pagefind/pagefind-component-ui.js"></script>
+
+  </body>
+
+</html>

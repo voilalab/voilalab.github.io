@@ -1,0 +1,9 @@
+---
+layout: none
+---
+
+User-agent: *
+Allow: /
+
+User-agent: *
+Sitemap: https://voilalab.github.io/sitemap.xml

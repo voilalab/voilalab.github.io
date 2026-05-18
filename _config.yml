@@ -1,0 +1,103 @@
+# Site settings
+title: VOILA Lab @ GT
+yourname: Sara Fridovich-Keil
+email: sfk@gatech.edu
+description: VOILA Research Group at Georgia Tech Machine Learning
+baseurl: ""
+url: "https://voilalab.github.io"
+exturl: "https://voilalab.github.io"
+
+# Google analytics ID: Remove or use your own!
+# google_analytics: UA-167467135-1
+# google_analytics_4: G-BKG8WP924R
+# google_tag_manager: GTM-5KBZDTG
+
+# Footer info
+about: >
+    <a href="https://ml.gatech.edu/" target="_blank" rel="noopener noreferrer">Machine Learning Center</a><br/>
+    <a href="https://ece.gatech.edu/" target="_blank" rel="noopener noreferrer">School of ECE</a><br/>
+    <a href="https://coe.gatech.edu/" target="_blank" rel="noopener noreferrer">College of Engineering</a><br/>
+    Georgia Tech
+
+information: >
+    <a href="mailto:sfk@gatech.edu" target="_blank" rel="noopener noreferrer"><i class="fa fa-envelope fa-1x"></i> Email Sara</a> <br/>
+    <a href="/prospective"><i class="fa fa-users fa-1x"></i> Explore openings</a> <br/>
+    <a href="https://github.com/sbryngelson/academic-website-template" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-1x"></i> Site template</a> 
+
+
+
+# Pages shown in navbar
+nav_pages:
+  - name: team
+  - name: research
+  - name: papers
+  - name: teaching
+  - name: prospective
+
+include:
+  - .htaccess
+  - _pages
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  parse_block_html: true # default for kramdown is false. This will enable using Markdown links
+
+
+plugins: 
+  - jekyll-scholar
+  - jekyll-seo-tag
+
+scholar:
+
+  last_name: Fridovich-Keil
+  first_name: Sara
+
+  style: shb
+  locale: en
+
+  source: assets/
+  bibliography: ref.bib
+  bibliography_template: bibtemplate
+  sort_by: year, month
+  order: descending
+
+  replace_strings: true
+  join_strings: true
+
+  details_dir: bibliography
+  details_layout: bibtex.html
+  details_link: Details
+
+  query: "@*"
+
+  bibliography_list_attributes:
+    reversed: "reversed"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - update_boostrap.sh
+  - tags
+  - Rakefile
+  - LICENSE
+  - .DS_Store
+  - jekcheck.sh
+  - node_modules
+  - package.json
+  - package-lock.json
+  - docs

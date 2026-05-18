@@ -1,0 +1,14 @@
+- name: Sara Fridovich-Keil
+  photo: sara
+  gt: https://sarafridov.github.io/
+  info: Assistant Professor<br/> ECE, Machine Learning<br/> Georgia Tech
+  infoshort: "<i>Sutterfield Family Early Career Professor</i><br/> School of Electrical and Computer Engineering <br/><b><i>Georgia Institute of Technology</i></b><br/><br/>"
+  email: sfk@gatech.edu
+  github: https://github.com/sarafridov
+  linkedin: https://www.linkedin.com/in/sara-fridovich-keil-3aa744160/
+  scholar: https://scholar.google.com/citations?user=9xF7M6wAAAAJ&hl=en
+  cv: assets/sara_cv.pdf
+  education1: (2025- ) Assistant Professor of <a href="https://ece.gatech.edu/" target="_blank">ECE</a>, Georgia Tech
+  education2: (2023-25) NSF Postdoc in EE, Stanford (with <a href="https://stanford.edu/~pilanci/" target="_blank">Mert Pilanci</a> and <a href="https://stanford.edu/~gordonwz/" target="_blank">Gordon Wetzstein</a>)
+  education3: (2018-2023) Ph.D. EECS, UC Berkeley (with <a href="https://people.eecs.berkeley.edu/~brecht/" target="_blank">Benjamin Recht</a>)
+  education4: (2014-2018) B.S. EE, Princeton (with <a href="https://ece.princeton.edu/people/peter-j-ramadge" target="_blank">Peter J. Ramadge</a>)

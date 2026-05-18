@@ -1,0 +1,46 @@
+- name: Kent Gauen
+  photo: buzz
+  info: Postdoc fellow
+
+- name: Namhoon Kim
+  photo: namhoon
+  info: PhD student
+  email: namhoon@gatech.edu  
+  linkedin: https://www.linkedin.com/in/etoilekim  
+  github: https://github.com/etoilekim
+  website: https://sites.google.com/yonsei.ac.kr/namhoon/cv
+  scholar: https://scholar.google.com/citations?user=OXpGAvAAAAAJ&hl=en
+  # researchgate:
+
+- name: Ben Burns
+  photo: ben
+  info: PhD student
+  notes: NSF GRFP
+  email: bburns46@gatech.edu
+  linkedin: https://www.linkedin.com/in/burns-benjamin/
+  github: https://github.com/bburns-ds
+  website: https://bburns.xyz
+  scholar: https://scholar.google.com/citations?hl=en&user=-lgOdYcAAAAJ
+  # researchgate:
+
+- name: Jihoon Hong
+  photo: buzz
+  info: PhD student
+  notes: co-advised w/ Glen Chou (SCP)
+
+- name: Alireza Kheirandish
+  photo: buzz
+  info: PhD student
+  notes: co-advised w/ Joe Greene (GTRI); GTRI Fellow
+
+- name: Quang Nguyen
+  photo: buzz
+  info: PhD student
+
+- name: Sungwon Jeong
+  photo: buzz
+  info: MS student
+
+- name: Aditya Pandey
+  photo: buzz
+  info: MS student
