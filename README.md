@@ -70,8 +70,6 @@ images/              teampic/, research/, logopic/
 shb.csl              citation style
 ```
 
-## Template provenance
+## Template 
 
-Forked from [`sbryngelson/academic-website-template`](https://github.com/sbryngelson/academic-website-template) (MIT). Files named `SHB_*` or `shb.*` (e.g. `_sass/SHB_css.scss`, `shb.csl`) are template scaffolding from the upstream author and should be left in place — they are referenced by name in config and import paths.
-
-We do **not** plan to pull upstream template updates as a routine. The fork has been customized enough that future upstream changes would be cherry-picked manually, not merged.
+Officially forked from [`sbryngelson/academic-website-template`](https://github.com/sbryngelson/academic-website-template) (MIT), but in reality was forked from the [comp-physics website](https://github.com/comp-physics/comp-physics.github.io) which uses the template.
