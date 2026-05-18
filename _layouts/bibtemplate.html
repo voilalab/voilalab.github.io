@@ -61,17 +61,15 @@ ol li{
 {% endif %}
 
 {% if entry.doi %}
-<a href="{{ entry.doi | prepend: 'https://doi.org/' }}" target="_blank"><button class="btn btn-info bib-btn">DOI</button></a>
+<a href="{{ entry.doi | prepend: 'https://doi.org/' }}" target="_blank"><button class="btn btn-info bib-btn">PAPER</button></a>
+{% elsif entry.link %}
+<a href="{{ entry.link }}" target="_blank"><button class="btn btn-info bib-btn">PAPER</button></a>
 {% endif %}
 
-{% if entry.link %}
-<a href="{{ entry.link }}" target="_blank"><button class="btn btn-info bib-btn">DOI</button></a>
-{% endif %}
-
-<button class="btn btn-info bib-btn" style="opacity:0.7;" onclick="toggleBibtex{{entry.key}}()">BIB</button>
+<button type="button" class="btn btn-info bib-btn bib-toggle" style="opacity:0.7;" data-bib-target="a{{entry.key}}">BIB</button>
 
 {% if entry.abstract %}
-<button class="btn btn-info bib-btn" style="opacity:0.7;" onclick="toggleAbstract{{entry.key}}()">ABSTRACT</button>
+<button type="button" class="btn btn-info bib-btn bib-toggle" style="opacity:0.7;" data-bib-target="b{{entry.key}}">ABSTRACT</button>
 {% endif %}
 </div>
 
@@ -93,14 +91,3 @@ ol li{
 </div>
 </div>
 {% endif %}
-
-<script>
-function toggleBibtex{{entry.key}}(parameter) {
-    var x = document.getElementById('a{{entry.key}}');
-    x.style.display = x.style.display === 'none' ? 'block' : 'none';
-}
-function toggleAbstract{{entry.key}}(parameter) {
-    var x = document.getElementById('b{{entry.key}}');
-    x.style.display = x.style.display === 'none' ? 'block' : 'none';
-}
-</script>
