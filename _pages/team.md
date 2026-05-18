@@ -83,7 +83,7 @@ permalink: /team/
 </div>
 </div> -->
 
-### MS alumni
+<!-- ### MS alumni
 <div class="jumbotron">
 <div class="row">
 <div class="col-sm-12 clearfix">
@@ -92,7 +92,7 @@ permalink: /team/
 {% endfor %}
 </div>
 </div>
-</div>
+</div> -->
 
 <!-- ### Undergraduate alumni
 <div class="jumbotron">
