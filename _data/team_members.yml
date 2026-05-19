@@ -1,6 +1,12 @@
 - name: Kent Gauen
   photo: buzz
   info: Postdoc fellow
+  # email:
+  # linkedin:
+  # github:
+  # website:
+  # scholar:
+  # researchgate:
 
 - name: Namhoon Kim
   photo: namhoon
@@ -27,19 +33,43 @@
   photo: buzz
   info: PhD student
   notes: co-advised w/ Glen Chou (SCP)
+  # email:
+  # linkedin:
+  # github:
+  # website:
+  # scholar:
+  # researchgate:
 
 - name: Alireza Kheirandish
   photo: buzz
   info: PhD student
   notes: co-advised w/ Joe Greene (GTRI); GTRI Fellow
+  # email:
+  # linkedin:
+  # github:
+  # website:
+  # scholar:
+  # researchgate:
 
 - name: Quang Nguyen
   photo: buzz
   info: PhD student
+  # email:
+  # linkedin:
+  # github:
+  # website:
+  # scholar:
+  # researchgate:
 
 - name: Sungwon Jeong
   photo: buzz
   info: MS student
+  # email:
+  # linkedin:
+  # github:
+  # website:
+  # scholar:
+  # researchgate:
 
 - name: Sarvesh Sundaram
   photo: sarvesh
@@ -54,3 +84,9 @@
 - name: Aditya Pandey
   photo: buzz
   info: MS student
+  # email:
+  # linkedin:
+  # github:
+  # website:
+  # scholar:
+  # researchgate:
