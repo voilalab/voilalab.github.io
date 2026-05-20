@@ -54,12 +54,12 @@
 - name: Quang Nguyen
   photo: buzz
   info: PhD student
-  # email:
-  # linkedin:
-  # github:
-  # website:
-  # scholar:
+  email: qnguyen95@gatech.edu
+  linkedin: https://www.linkedin.com/in/quang-nguyenln/
+  github: https://github.com/quang-nguyenln
+  scholar: https://scholar.google.com/citations?user=6UOb7cQAAAAJ&hl=en
   # researchgate:
+  # website:
 
 - name: Sungwon Jeong
   photo: buzz
