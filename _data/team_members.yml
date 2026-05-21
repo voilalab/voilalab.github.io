@@ -62,13 +62,13 @@
   # website:
 
 - name: Sungwon Jeong
-  photo: buzz
+  photo: sungwon
   info: MS student
-  # email:
-  # linkedin:
-  # github:
-  # website:
+  email: sjeong304@gatech.edu
+  linkedin: https://www.linkedin.com/in/sungwon-jeong/
+  github: https://github.com/sjeong304
   # scholar:
+  # website:
   # researchgate:
 
 - name: Sarvesh Sundaram
