@@ -1,11 +1,11 @@
 - name: Kent Gauen
-  photo: buzz
-  info: Postdoc fellow
-  # email:
-  # linkedin:
-  # github:
-  # website:
-  # scholar:
+  photo: kent
+  info: ORISE Postdoc Fellow
+  email: gauenk@gatech.edu
+  linkedin: https://www.linkedin.com/in/gauenk
+  github: https://github.com/gauenk
+  website: https://gauenk.github.io/
+  scholar: https://scholar.google.com/citations?user=CRbbyHMAAAAJ&hl=en
   # researchgate:
 
 - name: Namhoon Kim
