@@ -30,25 +30,25 @@
   # researchgate:
 
 - name: Jihoon Hong
-  photo: buzz
+  photo: jihoon
   info: PhD student
   notes: co-advised w/ Glen Chou (SCP)
-  # email:
-  # linkedin:
-  # github:
-  # website:
-  # scholar:
+  email: jhong392@gatech.edu
+  linkedin: https://www.linkedin.com/in/jihoon-hong-1b839b205/
+  github: https://github.com/athlon76
+  website: https://athlon76.github.io/
+  scholar: https://scholar.google.com/citations?user=MXyixOIAAAAJ&hl=en
   # researchgate:
 
 - name: Alireza Kheirandish
   photo: buzz
   info: PhD student
   notes: co-advised w/ Joe Greene (GTRI); GTRI Fellow
-  # email:
-  # linkedin:
-  # github:
-  # website:
-  # scholar:
+  email: akheirandish3@gatech.edu
+  # linkedin: 
+  github: https://github.com/KheirAli
+  website: https://kheirali.github.io/
+  # scholar:https://scholar.google.com/citations?user=-9IKjn8AAAAJ&hl=en
   # researchgate:
 
 - name: Quang Nguyen
