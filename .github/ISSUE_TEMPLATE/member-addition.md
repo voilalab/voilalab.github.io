@@ -24,4 +24,4 @@ researchgate:
 
 ## Photo
 
-Please **attach a headshot** to this issue (drag-and-drop into the comment box). If you do not include a headshot, I will use Buzz (the GT mascot) instead.
+Please **attach a headshot** to this issue by either (i) clicking the attach files button below or (ii) submitting the issue and dragging-and-dropping the image into the comment box. If you do not include a headshot, I will use Buzz (the GT mascot) instead.

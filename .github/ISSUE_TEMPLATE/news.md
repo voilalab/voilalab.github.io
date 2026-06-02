@@ -16,7 +16,7 @@ date:
 headline:
 ```
 
-Examples are shown [below](#example-entries). If you would like to add multiple news entries at a time, just copy and paste the template multiple times. 
+Examples are shown [below](#example-entries). If you would like to add multiple news entries at a time, just copy and paste the template multiple times.
 
 ```yaml
 date: January 1st, 1970
