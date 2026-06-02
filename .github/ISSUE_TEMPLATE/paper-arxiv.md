@@ -2,7 +2,7 @@
 name: New paper (preprint / arXiv)
 about: A paper of ours is publicly available for the first time (e.g. just posted to arXiv)
 labels: new
-assignees: TODO
+assignees: bburns-ds
 ---
 
 # New paper

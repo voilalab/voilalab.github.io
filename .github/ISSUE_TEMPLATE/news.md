@@ -1,8 +1,8 @@
 ---
 name: News entry 
-about: You have new news other than arXiv or paper acceptance: talks, awards, etc.
+about: You have new news other than arXiv or paper acceptance, e.g. talks, awards, etc.
 labels: new
-assignees: TODO
+assignees: bburns-ds
 ---
 
 # News entries

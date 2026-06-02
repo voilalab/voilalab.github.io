@@ -2,7 +2,7 @@
 name: Update team page entry
 about: My existing team page entry needs changes (new role, links, photo, etc.)
 labels: update
-assignees: TODO
+assignees: bburns-ds
 ---
 
 # Update team member info

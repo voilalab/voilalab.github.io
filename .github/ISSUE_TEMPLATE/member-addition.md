@@ -2,7 +2,7 @@
 name: New team page entry
 about: I am a new lab member and do not yet appear on the team page
 labels: new
-assignees: TODO
+assignees: bburns-ds
 ---
 
 # New team member

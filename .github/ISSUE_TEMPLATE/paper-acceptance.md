@@ -2,7 +2,7 @@
 name: Paper acceptance
 about: A paper of ours has been accepted to a venue (conference, journal, workshop)
 labels: update
-assignees: TODO
+assignees: bburns-ds
 ---
 
 # Paper acceptance
@@ -40,6 +40,22 @@ If there's a public code repository, paste the link:
 ```yaml
 code:
 ```
+
+## Research area(s)
+
+Check (`[ ] -> [x]`) every theme this paper belongs to (at least one). These map to the sections on the [research page](https://voilalab.github.io/research/):
+
+- [ ] 3D reconstruction and representation
+- [ ] Medical imaging
+- [ ] Machine learning foundations
+- [ ] Generative priors for inverse problems
+- [ ] Identifying and tackling distribution shift
+- [ ] Other / not sure (describe below)
+
+```yaml
+notes:
+```
+
 
 ---
 
