@@ -33,8 +33,7 @@ code:
 
 ## Research area(s)
 
-Check every theme this paper belongs to (at least one). These map to the sections on
-the [research page](https://voilalab.github.io/research/):
+Check (`[ ] -> [x]`) every theme this paper belongs to (at least one). These map to the sections on the [research page](https://voilalab.github.io/research/):
 
 - [ ] 3D reconstruction and representation
 - [ ] Medical imaging
