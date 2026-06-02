@@ -43,12 +43,12 @@
 - name: Alireza Kheirandish
   photo: buzz
   info: PhD student
-  notes: co-advised w/ Joe Greene (GTRI); GTRI Fellow
+  notes: 
   email: akheirandish3@gatech.edu
   # linkedin: 
   github: https://github.com/KheirAli
   website: https://kheirali.github.io/
-  # scholar:https://scholar.google.com/citations?user=-9IKjn8AAAAJ&hl=en
+  scholar: https://scholar.google.com/citations?user=-9IKjn8AAAAJ&hl=en
   # researchgate:
 
 - name: Quang Nguyen

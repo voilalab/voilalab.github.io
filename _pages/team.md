@@ -7,7 +7,10 @@ permalink: /team/
 
 ## Team
 
-<!-- TODO: add a VOILA group photo here once one exists. -->
+<center>	
+<img src="{{site.url}}{{site.baseurl}}/images/teampic/team-summer-2026.jpeg" width="100%" style='border-radius: 8px;' alt="Group photo of VOILA Lab members"/>
+<b>L to R</b>: Al, Kent, Ben, Sungwon, Sara, Quang, Namhoon, Jihoon, Merve. <br/><b>Not Pictured</b>: Aditya, Sarvesh <br/>
+</center>
 
 <!-- ### PI -->
 
