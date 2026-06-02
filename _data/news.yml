@@ -1,11 +1,5 @@
 - date: May ??, 2026
   headline: "<a href='https://voilalab.github.io' target='_self' rel='noopener noreferrer'>New website</a> is up!"
 
-- date: June 3rd, 2026
-  headline: "TODO : info about people attending CVPR"
-
 - date: May 28th, 2025
   headline:  "New preprint on understanding when, why, and how diffusion posterior samplers fail <a href='https://arxiv.org/pdf/2605.30330' target='_self' rel='noopener noreferrer'>is available on arXiv</a>"
-
-- date: March 15, 2026
-  headline: "Our lab is awarded a GTRI Fellowship!"

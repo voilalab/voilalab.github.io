@@ -12,7 +12,7 @@ Pick the issue template that matches what you want to change — each opens a pr
 2. [I'm a new lab member and not yet on the team page](https://github.com/voilalab/voilalab.github.io/issues/new?template=member-addition.md)
 3. [A paper of ours was accepted to a venue](https://github.com/voilalab/voilalab.github.io/issues/new?template=paper-acceptance.md)
 4. [A paper of ours was posted on arXiv](https://github.com/voilalab/voilalab.github.io/issues/new?template=paper-arxiv.md)
-5. [Other news — a talk, award, grant, etc.](https://github.com/voilalab/voilalab.github.io/issues/new?template=news.md)
+5. [Other news — a talk, award, fellowship, etc.](https://github.com/voilalab/voilalab.github.io/issues/new?template=news.md)
 6. [Something else](https://github.com/voilalab/voilalab.github.io/issues/new)
 
 ## Quick start
