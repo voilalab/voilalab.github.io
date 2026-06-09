@@ -11,7 +11,7 @@ permalink: /
 We're the **VOILA Lab at Georgia Tech**.
 Our lab's research applies techniques from machine learning, signal processing, and optimization to solve inverse problems in computational imaging, including tasks in computer vision, medical imaging, and scientific imaging.
 
-Please see our <a href="{{ site.url }}{{ site.baseurl }}/research">research areas page</a> for our lab's recent research, and our <a href="{{ site.url }}{{ site.baseurl }}/research">papers page</a> for an exhaustive listing of our lab's work.
+Please see our <a href="{{ site.url }}{{ site.baseurl }}/research">research areas page</a> for our lab's recent research, and our <a href="{{ site.url }}{{ site.baseurl }}/papers">papers page</a> for an exhaustive listing of our lab's work.
 
 **Research areas:**
 <div class="research-chips" markdown="0">
@@ -48,11 +48,11 @@ Please see our <a href="{{ site.url }}{{ site.baseurl }}/research">research area
 <div class="jumbotron">
 <h2>Thinking about joining the group?</h2>
 
-In general, I plan to hire 1-2 PhD students per year, but that may fluctuate year to year. 
+In general, I plan to hire 1-2 PhD students per year, but that may fluctuate year to year.
 
-Please read the <a href="{{ site.url }}{{ site.baseurl }}/vacancies.html">Vacancies</a> page for detailed instructions before contacting me.
+Please read the <a href="{{ site.url }}{{ site.baseurl }}/prospective.html">Prospective</a> page for detailed instructions before contacting me.
 
-<strong>What strong applicants usually have:</strong> a solid foundation in linear algebra, optimization, signal processing, probability & statistics, and algorithms & data structures. Most project use Python (including GPU and autodiff libraries like PyTorch, JAX, and CuPy), but familiarity with lower-level languages like CUDA or C++ is a bonus
+<strong>What strong applicants usually have:</strong> a solid foundation in linear algebra, optimization, signal processing, probability & statistics, and algorithms & data structures. Most projects use Python (including GPU and autodiff libraries like PyTorch, JAX, and CuPy), but familiarity with lower-level languages like CUDA or C++ is a bonus
 </div>
 
 <div class="jumbotron" data-pagefind-ignore>

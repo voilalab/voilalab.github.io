@@ -15,7 +15,7 @@ permalink: /prospective
 </div>
 
 <div class="jumbotron">
-<h2 id="advice-for-phd-students">Applying to my group</h2>
+<h2 id="applying-to-my-group">Applying to my group</h2>
 <p>If you are a prospective student not yet at Georgia Tech, please apply to the ECE and/or ML PhD programs and mention my name as a potential advisor in your application. Note that if you apply to the ML PhD, I can only see your application if you list ECE as your home department. Please also consider applying to any fellowship programs you may be eligible for, including NSF graduate and postdoctoral fellowships (for US citizens), industry graduate fellowships, and (for prospective postdocs) the <a href="https://ppfp.coe.gatech.edu/">President’s Postdoctoral Fellowship</a> at Georgia Tech.</p>
 
 <p>If you think I might be a good advisor (or postdoc mentor) fit for you, please apply to Georgia Tech (ECE, or ML with ECE as home department) and mention my name in your application. If you are already at Georgia Tech, or you have something to discuss that will not be evident in your application, email me and include the word “voila” as the first word of the subject line of your email. Unfortunately I receive way too many emails, so I apologize if I am not able to respond to all of them.</p>
