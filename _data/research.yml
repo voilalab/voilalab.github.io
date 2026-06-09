@@ -7,10 +7,15 @@ themes:
     # bullets:
     #   - "A"
     #   - "B"
-    papers: [grids-vs-inrs, plenoxels, kplanes, thermalnerf, microfacetfields, 3d-field-of-junctions, GA-planes]
-    links:
-      - {text: "Plenoxels", url: "https://github.com/sxyu/svox2"}
-      - {text: "K-Planes", url: "https://github.com/sarafridov/K-Planes"}
+    papers:
+      - {text: "Grids vs INRs", key: kim2025grids}
+      - {text: "Plenoxels", key: fridovich-keil2022plenoxels}
+      - {text: "K-Planes", key: fridovich-keilsaraandmeantigiacomo2023kplanes}
+      - {text: "ThermalNeRF", key: lin2024thermalnerf}
+      - {text: "Neural Microfacet Fields", key: mai2023neural}
+      - {text: "3D Field of Junctions", key: kim20263d}
+      - {text: "GA-Planes", key: sivgin2025geometric}
+      - {text: "Compression Error Bounds", key: nguyen2026bounding}
 
   - slug: medical-imaging
     title: Medical imaging
@@ -20,21 +25,27 @@ themes:
     # bullets:
     #   - "A"
     #   - "B"
-    papers: [padis-mri, provable-tr, propeller-mri, perfusion-ct, provable-fast-tr, dab-quant]
-    links:
-      - {text: "", url: ""}
+    papers:
+      - {text: "PaDIS-MRI", key: sanda2025padismria}
+      - {text: "Provable TR", key: fridovich-keil2026gradient}
+      - {text: "Probable, Fast TR", key: lou2026accurate}
+      - {text: "Propeller MRI", key: ghosh2023volumetric}
+      - {text: "Perfusion Photon-Counting CT", key: kim2026perfusion}
+      - {text: "DAB-quant", key: patel2022dabquant}
 
   - slug: foundational-ml
     title: Machine learning foundations
     thumb: "/images/research/foundational-ml.svg"
-    alt: "TODO : MLP"
+    alt: "Gradient ascent and MLP"
     # summary: "TODO: single sentence summary"
     # bullets:
     #   - "A"
     #   - "B"
-    papers: [spectral-bias, sparse-nn-recovery, grids-vs-inrs]
-    links:
-      - {text: "", url: ""}
+    papers:
+      - {text: "Spectral Bias", key: fridovich-keil2022spectral}
+      - {text: "Sparse NN Recovery", key: fridovich-keil2026recovery}
+      - {text: "Grids vs INRs", key: kim2025grids}
+      - {text: "Compression Error Bounds", key: nguyen2026bounding}
 
   - slug: generative-priors
     title: Generative priors for inverse problems
@@ -44,21 +55,26 @@ themes:
     # bullets:
     #   - "A"
     #   - "B"
-    papers: [padis-mri, shift-with-generative-priors, protein-space-ips]
-    links:
-      - {text: "", url: ""}
+    papers:
+      - {text: "PaDIS-MRI", key: sanda2025padismria}
+      - {text: "Distribution-Shift Uncertainty", key: kim2025distributionshift}
+      - {text: "Protein-Space Inverse Problems", key: levy2025solving}
+      - {text: "Failures in DPS", key: burns2026when}
+      - {text: "KLIP", key: kheirandish2026klip}
 
   - slug: ood
     title: Identifying and tackling distribution shift
     thumb: "/images/research/distribution-shift.svg"
-    alt:
+    alt: "Classifier mislabeling under distribution shift"
     # summary:
     # bullets:
     #   - "A"
     #   - "B"
-    papers: [fourier-shift-robustness, mistakes-on-imagenet, shift-with-generative-priors]
-    links:
-      - {text: "", url: ""}
+    papers:
+      - {text: "Fourier Lens on Robustness", key: fridovich-keil2022models}
+      - {text: "Mistakes on ImageNet", key: vasudevan2022when}
+      - {text: "Distribution-Shift Uncertainty", key: kim2025distributionshift}
+      - {text: "KLIP", key: kheirandish2026klip}
 
   # - slug: 
   #   title:
@@ -68,6 +84,5 @@ themes:
   #   bullets:
   #     - "A"
   #     - "B"
-  #   papers: []
-  #   links:
-  #     - {text: "", url: ""}
+  #   papers:
+  #     - {text: "", key: ""}

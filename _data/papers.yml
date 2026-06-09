@@ -1,0 +1,87 @@
+# Presentation-only metadata for the papers page, merged into _layouts/bibtemplate.html
+# by bib citation key (entry.key). All fields optional. Keys must match ref.bib exactly.
+#
+#   code:  GitHub repo URL -> renders a CODE button
+#   badge: explicit override for the left-column pill label (e.g. "PREPRINT").
+#          Normally unnecessary: arXiv entries get a PREPRINT badge automatically from
+#          their archiveprefix field, and article/inproceedings/report get JOURNAL/
+#          CONFERENCE/REPORT from their bib type.
+#
+# Example:
+# plenoxels:
+#   code: https://github.com/sxyu/svox2
+
+fridovich-keil2018contact:
+  code: https://github.com/sarafridov/FingertipVideo
+
+fridovich-keil2022approximately:
+  code: https://github.com/modestyachts/AELS
+
+fridovich-keil2022models:
+  code: https://github.com/sarafridov/RobustNets
+
+fridovich-keil2022plenoxels:
+  code: https://github.com/sxyu/svox2
+
+fridovich-keil2022spectral:
+  code: https://github.com/google-research/google-research/tree/master/spectral_bias
+
+fridovich-keil2026recovery:
+  code: https://github.com/voilalab/MLP-IHT
+
+fridovich-keilsaraandmeantigiacomo2023kplanes:
+  code: https://github.com/sarafridov/K-Planes
+
+ghosh2023volumetric:
+  code: https://github.com/sarafridov/volumetric-propeller
+
+kim2025distributionshift:
+  code: https://github.com/voilalab/uncertainty_quantification_LPN
+
+kim2025grids:
+  code: https://github.com/voilalab/INR-benchmark
+
+kim2026perfusion:
+  code: https://github.com/voilalab/VI-PRISM
+
+levy2025solving:
+  code: https://github.com/axel-levy/axlevy-adp-3d
+
+lin2024thermalnerf:
+  code: https://github.com/yvette256/nerfstudio-thermal
+
+lou2026accurate:
+  code: https://github.com/voilalab/exact
+
+mai2023neural:
+  code: https://github.com/half-potato/nmf
+
+patel2022dabquant:
+  code: https://github.com/sarafridov/DAB-quant
+
+sanda2025padismria:
+  code: https://github.com/voilalab/PaDIS-MRI
+
+shankar2020neural:
+  code: https://github.com/modestyachts/neural_kernels_code
+
+sivgin2025geometric:
+  code: https://github.com/sivginirmak/Geometric-Algebra-Planes
+
+tancik2020fourier:
+  code: https://github.com/tancik/fourier-feature-networks
+
+vasudevan2022when:
+  code: https://github.com/google-research/imagenet-mistakes
+
+kim20263d:
+  code: https://github.com/voilalab/3D-Field-of-Junctions
+
+burns2026when:
+  code: https://github.com/voilalab/diagnosing-posterior-sampling
+
+nguyen2026bounding:
+  code: https://github.com/voilalab/global_error_bound
+
+kheirandish2026klip:
+  code: https://github.com/voilalab/KLIP

@@ -19,51 +19,46 @@ ol li{
 }
 </style>
 
-{% assign _allowed = "article inproceedings report unpublished" %}
+{% assign _allowed = "article inproceedings report misc" %}
 {% if _allowed contains entry.type and entry.keywords != "nonheavy" %}
+{% assign extra = site.data.papers[entry.key] %}
 <div class="pub-entry">
 <h3 class="visually-hidden" id="pub-{{ entry.key }}" data-pagefind-weight="4">{{ entry.title | default: entry.key }}</h3>
 <div class="row">
 <div class="col-sm-2 col-2 d-none d-md-block" style="margin:0; padding:0; margin-top:4px;">
 
-{% if entry.type == "article" %}
-<center><button class="btn btn-primary pub-type-badge Disabled">ARTICLE</button></center>
-{% endif %}
-{% if entry.type == "inproceedings" %}
-<center><button class="btn btn-success pub-type-badge Disabled">PROCEEDING</button></center>
-{% endif %}
-{% if entry.type == "report" %}
-<center><button class="btn btn-danger pub-type-badge Disabled">REPORT</button></center>
-{% endif %}
-{% if entry.type == "unpublished" %}
+{% if extra.badge %}
+<center><button class="btn btn-warning pub-type-badge Disabled">{{ extra.badge }}</button></center>
+{% elsif entry.archiveprefix %}
 <center><button class="btn btn-warning pub-type-badge Disabled">PREPRINT</button></center>
+{% elsif entry.type == "article" %}
+<center><button class="btn btn-primary pub-type-badge Disabled">JOURNAL</button></center>
+{% elsif entry.type == "inproceedings" %}
+<center><button class="btn btn-success pub-type-badge Disabled">CONFERENCE</button></center>
+{% elsif entry.type == "report" %}
+<center><button class="btn btn-danger pub-type-badge Disabled">REPORT</button></center>
 {% endif %}
 
 </div>
 
 <div class="col-sm-10 col-10">
 <div>
-{{reference | replace_first: 'Fridovich-Keil, S.', '<b>Fridovich-Keil, S.</b>' | replace_first: 'Kim, N.', '<b>Kim, N.</b>' | replace_first: 'Fridovich-Keil, Sara', '<b>Fridovich-Keil, Sara</b>'}}</div>
+{% assign ref = reference %}
+{% for name in site.bold_names %}
+{% capture b %}<b>{{ name }}</b>{% endcapture %}
+{% assign ref = ref | replace_first: name, b %}
+{% endfor %}
+{{ ref }}</div>
 
 <div style="margin-top:4px;">
-{% assign bibtest = false %}
-{% if entry.file %}
-{% assign bibfile = "/papers/" | append: entry.file %}
-{% for file in site.static_files %}
-  {% if file.path contains bibfile %}
-   {% assign bibtest = true %}
-  {% endif %}
-{% endfor %}
-{% endif %}
-
-{% if bibtest %}
-<a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank"><button class="btn btn-primary bib-btn">PDF</button></a>
-{% endif %}
-
 {% if entry.doi %}
 <a href="{{ entry.doi | prepend: 'https://doi.org/' }}" target="_blank"><button class="btn btn-info bib-btn">PAPER</button></a>
-{% elsif entry.link %}
-<a href="{{ entry.link }}" target="_blank"><button class="btn btn-info bib-btn">PAPER</button></a>
+{% elsif entry.url %}
+<a href="{{ entry.url }}" target="_blank"><button class="btn btn-info bib-btn">PAPER</button></a>
+{% endif %}
+
+{% if extra.code %}
+<a href="{{ extra.code }}" target="_blank"><button class="btn btn-info bib-btn">CODE</button></a>
 {% endif %}
 
 <button type="button" class="btn btn-info bib-btn bib-toggle" style="opacity:0.7;" data-bib-target="a{{entry.key}}">BIB</button>

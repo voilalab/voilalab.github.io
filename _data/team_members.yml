@@ -84,7 +84,7 @@
 - name: Aditya Pandey
   photo: buzz
   info: MS student
-  # email:
+  email: apandey369@gatech.edu
   # linkedin:
   # github:
   # website:
@@ -93,7 +93,7 @@
 
 - name: Merve Kocabas
   photo: buzz
-  info: MS student
+  info: Visiting MS student
   email: merve.kocabas@student.uni-tuebingen.de
   linkedin: https://tr.linkedin.com/in/merve-kocabaş-69b4b6249
   github: https://github.com/mervekocabas

@@ -13,9 +13,6 @@ Our lab's research applies techniques from machine learning, signal processing, 
 
 Please see our <a href="{{ site.url }}{{ site.baseurl }}/research">research areas page</a> for our lab's recent research, and our <a href="{{ site.url }}{{ site.baseurl }}/research">papers page</a> for an exhaustive listing of our lab's work.
 
-We are grateful for support from <a href="https://www.nsf.gov/">NSF</a>, <a href="https://www.gtri.gatech.edu/">GTRI</a>, <span style="color: #ff0000">[TODO (Sara): others? Kent's postdoc source?]</span>
-
-
 **Research areas:**
 <div class="research-chips" markdown="0">
   <span class="chip">Computational imaging</span>
@@ -54,7 +51,7 @@ We are grateful for support from <a href="https://www.nsf.gov/">NSF</a>, <a href
 In general, I plan to hire 1-2 PhD students per year, but that may fluctuate year to year. 
 
 Please read the <a href="{{ site.url }}{{ site.baseurl }}/vacancies.html">Vacancies</a> page for detailed instructions before contacting me.
-<br/><br/>
+
 <strong>What strong applicants usually have:</strong> a solid foundation in linear algebra, optimization, signal processing, probability & statistics, and algorithms & data structures. Most project use Python (including GPU and autodiff libraries like PyTorch, JAX, and CuPy), but familiarity with lower-level languages like CUDA or C++ is a bonus
 </div>
 

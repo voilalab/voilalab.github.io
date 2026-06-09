@@ -1,5 +1,11 @@
 - date: May ??, 2026
   headline: "<a href='https://voilalab.github.io' target='_self' rel='noopener noreferrer'>New website</a> is up!"
 
-- date: May 28th, 2025
-  headline:  "New preprint on understanding when, why, and how diffusion posterior samplers fail <a href='https://arxiv.org/pdf/2605.30330' target='_self' rel='noopener noreferrer'>is available on arXiv</a>"
+- date: June 3rd, 2026
+  headline: "Our group will be presenting two papers this week at CVPR: <a href='https://cvpr.thecvf.com/virtual/2026/poster/37660' target='_self' rel='noopener noreferrer'>KLIP (main track)</a> and <a href='https://vision-workshop-26.github.io/cvpr-2026/' target='_self' rel='noopener noreferrer'>3D Field of Junctions (workshop)</a>. Sara will also be giving talks in the <a href='https://alumni.media.mit.edu/~ayush/CCD/' target='_self' rel='noopener noreferrer'>Computational Cameras and Displays</a> and <a href='https://ivl.cs.brown.edu/4dworldmodels/' target='_self' rel='noopener noreferrer'>4D World Models</a> workshops."
+
+- date: May 28th, 2026
+  headline: "New preprint on predicting the reconstruction error of compressive signal parameterizations without access to ground truth <a href='https://arxiv.org/abs/2606.00126' target='_self' rel='noopener noreferrer'>is available on arXiv</a>."
+
+- date: May 28th, 2026
+  headline:  "New preprint on understanding when, why, and how diffusion posterior samplers fail <a href='https://arxiv.org/pdf/2605.30330' target='_self' rel='noopener noreferrer'>is available on arXiv</a>."

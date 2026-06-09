@@ -23,8 +23,8 @@ Our lab's research applies techniques from machine learning, signal processing, 
 {% endfor %}
 </ul>
 <div class="research-footer" markdown="0">
-{% if theme.papers %}<span class="research-pubs"><i class="fas fa-file-alt"></i> {% for key in theme.papers %}<a href="{{ site.url }}{{ site.baseurl }}/papers/#{{ key }}">{{ key }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</span>{% endif %}
-{% if theme.links %}<div class="research-links">{% for link in theme.links %}<a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="research-link"><i class="fab fa-github"></i> {{ link.text }}</a>{% endfor %}</div>{% endif %}
+{% if theme.papers %}<span class="research-pubs"><i class="fas fa-file-alt"></i> {% for paper in theme.papers %}<a href="{{ site.url }}{{ site.baseurl }}/papers/#{{ paper.key }}">{{ paper.text }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</span>{% endif %}
+{% if theme.papers %}{% capture codelinks %}{% for paper in theme.papers %}{% assign meta = site.data.papers[paper.key] %}{% if meta.code %}<a href="{{ meta.code }}" target="_blank" rel="noopener noreferrer" class="research-link"><i class="fab fa-github"></i> {{ paper.text }}</a>{% endif %}{% endfor %}{% endcapture %}{% if codelinks != "" %}<div class="research-links">{{ codelinks }}</div>{% endif %}{% endif %}
 </div>
 </div>
 </div>

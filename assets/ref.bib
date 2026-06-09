@@ -1,13 +1,16 @@
-@inproceedings{padis-mri,
-  title = {{{PaDIS-MRI}}: {{Patch-based}} Diffusion for Data-Efficient, Radiologist-Preferred {{MRI}} Reconstruction},
-  booktitle = {Machine Learning for Health 2025},
-  author={Rohan Sanda and Asad Aali and Andrew Johnston and Eduardo Reis and Gordon Wetzstein and Sara Fridovich-Keil},
-  year = 2025,
-  link = {https://raw.githubusercontent.com/mlresearch/v297/main/assets/sanda26a/sanda26a.pdf},
-  abstract = {Magnetic resonance imaging (MRI) requires long acquisition times, which raise costs, reduce accessibility, and increase susceptibility to motion artifacts. Diffusion probabilistic models that learn data-driven priors may reduce acquisition time by enabling reconstruction from undersampled k-space measurements. However, they typically require large training datasets that can be prohibitively expensive to collect. Patch-based diffusion models have shown promise in learning effective data-driven priors over small real-valued datasets, but have not yet demonstrated clinical value in MRI. We extend the Patch-based Diffusion Inverse Solver (PaDIS) to complex-valued, multi-coil MRI reconstruction, and compare it against a state-of-the-art whole-image diffusion baseline (FastMRI-EDM) for 7x undersampled MRI reconstruction on the FastMRI brain dataset. We show that PaDIS-MRI models trained on small datasets of as few as 25 k-space images outperform FastMRI-EDM on image quality metrics (PSNR, SSIM, NRMSE), pixel-level mask-induced variability, cross-contrast/-modality generalization, and robustness to severe k-space undersampling. In a blinded study with three radiologists, PaDIS-MRI reconstructions were chosen as diagnostically superior in 91.7\% of cases, compared to baselines (i) FastMRI-EDM and (ii) classical convex reconstruction with wavelet sparsity. These findings highlight the potential of patch-based diffusion priors for high-fidelity MRI reconstruction in data-scarce clinical settings where diagnostic confidence matters.}
+@misc{burns2026when,
+  title = {When, Why, and How Do Diffusion Posterior Samplers Fail? {{A}} Finite-Sample Lens},
+  author = {Burns, Benjamin A. and {Fridovich-Keil}, Sara},
+  year = 2026,
+  month = may,
+  eprint = {2605.30330},
+  primaryclass = {cs.LG},
+  url = {https://arxiv.org/abs/2605.30330},
+  abstract = {Diffusion models have excellent capacity to model complex distributions of natural data, which has made them a popular and effective choice for posterior sampling in imaging inverse problems. Existing methods can incorporate any measurement model at inference time but must use an inexact approximation for the likelihood at intermediate timesteps for computational tractability. Although these approximations can often work well empirically, their downstream effect on the sampled posterior is poorly understood and can result in unexplained failures. To understand when, why, and how these likelihood approximations propagate to erroneous posterior distributions, we introduce a finite-sample perspective on posterior sampling that approximates the posterior to arbitrary precision as training set size tends towards infinity, for any forward model and prior distribution. Using this finite-sample lens, we observe that popular posterior sampling approximations tend to under- or over-estimate the spread of the posterior at intermediate timesteps, causing downstream consequences including sensitivity to early stopping time, inaccurate relative weighting of posterior modes, and hallucination, both of prior modes that are not in the posterior and likelihood modes that are not supported by the prior. Moreover, we find that the cause of these posterior errors requires neither a nonlinear measurement model nor a multimodal posterior, but can arise solely due to a multimodal prior and inaccurate posterior spread at intermediate sampling times. Our finite-sample posterior sampling approach is agnostic to the type of likelihood approximation and the type of (linear or nonlinear) forward model, and can thus serve as a drop-in diagnostic to evaluate the accuracy and failure modes of existing and future posterior samplers.},
+  archiveprefix = {arXiv}
 }
 
-@inproceedings{sfk2018contact,
+@inproceedings{fridovich-keil2018contact,
   title = {Contact Surface Area: A Novel Signal for Heart Rate Estimation in Smartphone Videos},
   booktitle = {2018 {{IEEE}} Global Conference on Signal and Information Processing ({{GlobalSIP}})},
   author = {{Fridovich-Keil}, Sara and Ramadge, Peter J.},
@@ -19,31 +22,41 @@
   abstract = {We consider the problem of smartphone video-based heart rate estimation, which typically relies on measuring the green color intensity of the user's skin. We describe a novel signal in fingertip videos used for smartphone-based heart rate estimation: fingertip contact surface area. We propose a model relating contact surface area to pressure, and validate it on a dataset of 786 videos from 62 participants by demonstrating a statistical correlation between contact surface area and green color intensity. We estimate heart rate on our dataset with two algorithms, a baseline using the green signal only and a novel algorithm based on both color and area. We demonstrate lower rates of substantial errors ({$>$} 10 beats per minute) using the novel algorithm (4.1\%), compared both to the baseline algorithm (6.4\%) and to published results using commercial color-based applications ({$\geq$} 6\%).}
 }
 
-@unpublished{sfk2022approximately,
+@inproceedings{fridovich-keil2019choosing,
+  title = {Choosing the {{Step Size}}: {{Intuitive Line Search Algorithms}} with {{Efficient Convergence}}},
+  booktitle = {{{OPT}} 2019: {{Optimization}} for {{Machine Learning}}},
+  author = {{Fridovich-Keil}, Sara and Recht, Benjamin},
+  year = 2019,
+  pages = {1--21},
+  url = {https://opt-ml.org/papers/2019/paper_17.pdf},
+  abstract = {Iterative optimization algorithms generally consist of two components: a step direction and a step size. In this work, we focus on zeroth and first order methods for choosing the step size along either the negative gradient or a negative stochastic gradient. Line search methods are well-studied, with one of the most common being backtracking line search. Backtracking line search starts with an initial step size that is intended to be too large (greater than the inverse Lipschitz constant of the gradient), and then iteratively shrinks the step size until the Armijo condition for sufficient function decrease is satisfied. We propose two algorithms that match or improve upon the performance of backtracking line search in both theory (convergence rate bounds for deterministic gradient descent) and empirical performance (for both deterministic and stochastic gradient descent), depending on the initial step size, while providing an intuitive interpretation of each algorithm.},
+  langid = {english}
+}
+
+@misc{fridovich-keil2022approximately,
   title = {Approximately Exact Line Search},
   author = {{Fridovich-Keil}, Sara and Recht, Benjamin},
   year = 2022,
   eprint = {2011.04721},
   primaryclass = {math.OC},
-  archiveprefix = {arXiv},
   doi = {10.48550/arXiv.2011.04721},
-  abstract = {We propose approximately exact line search (AELS), which uses only function evaluations to select a step size within a constant fraction of the exact line search minimizer of a unimodal objective. We bound the number of iterations and function evaluations of AELS, showing linear convergence on smooth, strongly convex objectives with no dependence on the initial step size for three descent methods: steepest descent using the true gradient, approximate steepest descent using a gradient approximation, and random direction search. We demonstrate experimental speedup compared to Armijo line searches and other baselines on weakly regularized logistic regression for both gradient descent and minibatch stochastic gradient descent and on a benchmark set of derivative-free optimization objectives using quasi-Newton search directions. We also analyze a simple line search for the strong Wolfe conditions, finding upper bounds on iteration and function evaluation complexity similar to AELS. Experimentally we find AELS is much faster on deterministic and stochastic minibatch logistic regression, whereas Wolfe line search is slightly faster on the DFO benchmark. Our findings suggest that line searches and AELS in particular may be more useful in the stochastic optimization regime than commonly believed.}
+  abstract = {We propose approximately exact line search (AELS), which uses only function evaluations to select a step size within a constant fraction of the exact line search minimizer of a unimodal objective. We bound the number of iterations and function evaluations of AELS, showing linear convergence on smooth, strongly convex objectives with no dependence on the initial step size for three descent methods: steepest descent using the true gradient, approximate steepest descent using a gradient approximation, and random direction search. We demonstrate experimental speedup compared to Armijo line searches and other baselines on weakly regularized logistic regression for both gradient descent and minibatch stochastic gradient descent and on a benchmark set of derivative-free optimization objectives using quasi-Newton search directions. We also analyze a simple line search for the strong Wolfe conditions, finding upper bounds on iteration and function evaluation complexity similar to AELS. Experimentally we find AELS is much faster on deterministic and stochastic minibatch logistic regression, whereas Wolfe line search is slightly faster on the DFO benchmark. Our findings suggest that line searches and AELS in particular may be more useful in the stochastic optimization regime than commonly believed.},
+  archiveprefix = {arXiv}
 }
 
-@inproceedings{fourier-shift-robustness,
+@inproceedings{fridovich-keil2022models,
   title = {Models out of Line: A Fourier Lens on Distribution Shift Robustness},
   booktitle = {Advances in Neural Information Processing Systems},
   author = {{Fridovich-Keil}, Sara and Bartoldson, Brian and Diffenderfer, James and Kailkhura, Bhavya and Bremer, Timo},
-  editor = {Koyejo, S. and Mohamed, S. and Agarwal, A. and Belgrave, D. and Cho, K. and Oh, A.},
   year = 2022,
   volume = {35},
   pages = {11175--11188},
   publisher = {Curran Associates, Inc.},
-  link = {https://proceedings.neurips.cc/paper_files/paper/2022/file/48736dba3b8d933fabbfdb4f22a7be71-Paper-Conference.pdf},
+  url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/48736dba3b8d933fabbfdb4f22a7be71-Paper-Conference.pdf},
   abstract = {Improving the accuracy of deep neural networks on out-of-distribution (OOD) data is critical to an acceptance of deep learning in real world applications. It has been observed that accuracies on in-distribution (ID) versus OOD data follow a linear trend and models that outperform this baseline are exceptionally rare (and referred to as``effectively robust''). Recently, some promising approaches have been developed to improve OOD robustness: model pruning, data augmentation, and ensembling or zero-shot evaluating large pretrained models. However, there still is no clear understanding of the conditions on OOD data and model properties that are required to observe effective robustness. We approach this issue by conducting a comprehensive empirical study of diverse approaches that are known to impact OOD robustness on a broad range of natural and synthetic distribution shifts of CIFAR-10 and ImageNet. In particular, we view the" effective robustness puzzle" through a Fourier lens and ask how spectral properties of both models and OOD data correlate with OOD robustness. We find this Fourier lens offers some insight into why certain robust models, particularly those from the CLIP family, achieve OOD robustness. However, our analysis also makes clear that no known metric is consistently the best explanation of OOD robustness. Thus, to aid future research into the OOD puzzle, we address the gap in publicly-available models with effective robustness by introducing a set of pretrained CIFAR-10 models---\$ RobustNets \$---with varying levels of OOD robustness.}
 }
 
-@inproceedings{plenoxels,
+@inproceedings{fridovich-keil2022plenoxels,
   title = {Plenoxels: {{Radiance}} Fields without Neural Networks},
   booktitle = {Proceedings of the {{IEEE}}/{{CVF}} Conference on Computer Vision and Pattern Recognition ({{CVPR}})},
   author = {{Fridovich-Keil}, Sara and Yu, Alex and Tancik, Matthew and Chen, Qinhong and Recht, Benjamin and Kanazawa, Angjoo},
@@ -54,20 +67,19 @@
   abstract = {We introduce Plenoxels (plenoptic voxels), a system for photorealistic view synthesis. Plenoxels represent a scene as a sparse 3D grid with spherical harmonics. This representation can be optimized from calibrated images via gradient methods and regularization without any neural components. On standard, benchmark tasks, Plenoxels are optimized two orders of magnitude faster than Neural Radiance Fields with no loss in visual quality. For video and code, please see https://alexyu.net/plenoxels.}
 }
 
-@inproceedings{spectral-bias,
+@inproceedings{fridovich-keil2022spectral,
   title = {Spectral Bias in Practice: {{The}} Role of Function Frequency in Generalization},
   booktitle = {Advances in Neural Information Processing Systems},
   author = {{Fridovich-Keil}, Sara and Gontijo Lopes, Raphael and Roelofs, Rebecca},
-  editor = {Koyejo, S. and Mohamed, S. and Agarwal, A. and Belgrave, D. and Cho, K. and Oh, A.},
   year = 2022,
   volume = {35},
   pages = {7368--7382},
   publisher = {Curran Associates, Inc.},
-  link = {https://proceedings.neurips.cc/paper_files/paper/2022/file/306264db5698839230be3642aafc849c-Paper-Conference.pdf},
+  url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/306264db5698839230be3642aafc849c-Paper-Conference.pdf},
   abstract = {Despite their ability to represent highly expressive functions, deep learning models seem to find simple solutions that generalize surprisingly well. Spectral bias -- the tendency of neural networks to prioritize learning low frequency functions -- is one possible explanation for this phenomenon, but so far spectral bias has primarily been observed in theoretical models and simplified experiments. In this work, we propose methodologies for measuring spectral bias in modern image classification networks on CIFAR-10 and ImageNet. We find that these networks indeed exhibit spectral bias, and that interventions that improve test accuracy on CIFAR-10 tend to produce learned functions that have higher frequencies overall but lower frequencies in the vicinity of examples from each class. This trend holds across variation in training time, model architecture, number of training examples, data augmentation, and self-distillation. We also explore the connections between function frequency and image frequency and find that spectral bias is sensitive to the low frequencies prevalent in natural images. On ImageNet, we find that learned function frequency also varies with internal class diversity, with higher frequencies on more diverse classes. Our work enables measuring and ultimately influencing the spectral behavior of neural networks used for image classification, and is a step towards understanding why deep models generalize well.}
 }
 
-@article{provable-tr,
+@article{fridovich-keil2026gradient,
   title = {Gradient Descent Provably Solves Nonlinear Tomographic Reconstruction},
   author = {{Fridovich-Keil}, Sara and Valdivia, Fabrizio and Wetzstein, Gordon and Recht, Benjamin and Soltanolkotabi, Mahdi},
   year = 2026,
@@ -80,29 +92,19 @@
   abstract = {In computed tomography (CT), the forward model consists of a linear Radon transform followed by an exponential nonlinearity based on the attenuation of light according to the Beer--Lambert Law. Conventional reconstruction often involves inverting this nonlinearity and then solving a linear inverse problem. However, this nonlinear measurement preprocessing is poorly conditioned in the vicinity of high-density materials, such as metal. This preprocessing makes CT reconstruction methods numerically sensitive and susceptible to artifacts near high-density regions. In this paper, we study a technique where the signal is directly reconstructed from raw measurements through the nonlinear forward model. Though this optimization is nonconvex, we show that gradient descent provably converges to the global optimum at a geometric rate, perfectly reconstructing the underlying signal with a near minimal number of random measurements. We also prove similar results in the under-determined setting where the number of measurements is significantly smaller than the dimension of the signal. This is achieved by enforcing prior structural information about the signal through constraints on the optimization variables. We illustrate the benefits of direct nonlinear CT reconstruction with cone-beam CT experiments on synthetic and real 3D volumes, in which metal artifacts are reduced compared to standard linear reconstruction methods. Our experiments also demonstrate that logarithmic preprocessing alone is sufficient to produce metal artifacts, even in the absence of other causes such as beam hardening.}
 }
 
-@inproceedings{sparse-nn-recovery,
+@inproceedings{fridovich-keil2026recovery,
   title = {A Recovery Guarantee for Sparse Neural Networks},
   booktitle = {The Fourteenth International Conference on Learning Representations},
   author = {{Fridovich-Keil}, Sara and Pilanci, Mert},
   year = 2026,
-  link = {https://openreview.net/pdf?id=6UpstNltZ4},
+  url = {https://openreview.net/pdf?id=6UpstNltZ4},
   abstract = {We prove the first guarantees of sparse recovery for ReLU neural networks, where the sparse network weights constitute the signal to be recovered. Specifically, we study structural properties of the sparse network weights for two-layer, scalar-output networks under which a simple iterative hard thresholding algorithm recovers these weights exactly, using memory that grows linearly in the number of nonzero weights. We validate this theoretical result with simple experiments on recovery of sparse planted MLPs, MNIST classification, and implicit neural representations. Experimentally, we find performance that is competitive with, and often exceeds, a high-performing but memory-inefficient baseline based on iterative magnitude pruning. Code is available at https://github.com/voilalab/MLP-IHT.}
 }
 
-@article{sfkchoosing,
-  title = {Choosing the {{Step Size}}: {{Intuitive Line Search Algorithms}} with {{Efficient Convergence}}},
-  author = {{Fridovich-Keil}, Sara and Recht, Benjamin},
-  journal = {11th annual workshop on optimization for machine learning},
-  pages = {1--21},
-  langid = {english},
-  link = {https://opt-ml.org/papers/2019/paper_17.pdf},
-  abstract = {Iterative optimization algorithms generally consist of two components: a step direction and a step size. In this work, we focus on zeroth and first order methods for choosing the step size along either the negative gradient or a negative stochastic gradient. Line search methods are well-studied, with one of the most common being backtracking line search. Backtracking line search starts with an initial step size that is intended to be too large (greater than the inverse Lipschitz constant of the gradient), and then iteratively shrinks the step size until the Armijo condition for sufficient function decrease is satisfied. We propose two algorithms that match or improve upon the performance of backtracking line search in both theory (convergence rate bounds for deterministic gradient descent) and empirical performance (for both deterministic and stochastic gradient descent), depending on the initial step size, while providing an intuitive interpretation of each algorithm.}
-}
-
-@inproceedings{kplanes,
+@inproceedings{fridovich-keilsaraandmeantigiacomo2023kplanes,
   title = {K-Planes: {{Explicit}} Radiance Fields in Space, Time, and Appearance},
   booktitle = {Proceedings of the {{IEEE}}/{{CVF}} Conference on Computer Vision and Pattern Recognition ({{CVPR}})},
-  author = {{{Fridovich-Keil}, Sara and Meanti, Giacomo} and Warburg, Frederik Rahb{\ae}k and Recht, Benjamin and Kanazawa, Angjoo},
+  author = {{Fridovich-Keil, Sara and Meanti, Giacomo} and Warburg, Frederik Rahb{\ae}k and Recht, Benjamin and Kanazawa, Angjoo},
   year = 2023,
   month = jun,
   pages = {12479--12488},
@@ -110,71 +112,84 @@
   abstract = {We introduce k-planes, a white-box model for radiance fields in arbitrary dimensions. Our model uses d-choose-2 planes to represent a d-dimensional scene, providing a seamless way to go from static (d= 3) to dynamic (d= 4) scenes. This planar factorization makes adding dimension-specific priors easy, eg temporal smoothness and multi-resolution spatial structure, and induces a natural decomposition of static and dynamic components of a scene. We use a linear feature decoder with a learned color basis that yields similar performance as a nonlinear black-box MLP decoder. Across a range of synthetic and real, static and dynamic, fixed and varying appearance scenes, k-planes yields competitive and often state-of-the-art reconstruction fidelity with low memory usage, achieving 1000x compression over a full 4D grid, and fast optimization with a pure PyTorch implementation. For video results and code, please see sarafridov. github. io/K-Planes.}
 }
 
-@unpublished{propeller-mri,
+@misc{ghosh2023volumetric,
   title = {Volumetric Reconstruction Resolves Off-Resonance Artifacts in Static and Dynamic {{PROPELLER MRI}}},
   author = {Ghosh, Annesha and Wetzstein, Gordon and Pilanci, Mert and {Fridovich-Keil}, Sara},
   year = 2023,
   eprint = {2311.13177},
   primaryclass = {physics.med-ph},
-  archiveprefix = {arXiv},
   doi = {10.48550/arXiv.2311.13177},
-  abstract = {Off-resonance artifacts in magnetic resonance imaging (MRI) are visual distortions that occur when the actual resonant frequencies of spins within the imaging volume differ from the expected frequencies used to encode spatial information. These discrepancies can be caused by a variety of factors, including magnetic field inhomogeneities, chemical shifts, or susceptibility differences within the tissues. Such artifacts can manifest as blurring, ghosting, or misregistration of the reconstructed image, and they often compromise its diagnostic quality. We propose to resolve these artifacts by lifting the 2D MRI reconstruction problem to 3D, introducing an additional "spectral" dimension to model this off-resonance. Our approach is inspired by recent progress in modeling radiance fields, and is capable of reconstructing both static and dynamic MR images as well as separating fat and water, which is of independent clinical interest. We demonstrate our approach in the context of PROPELLER (Periodically Rotated Overlapping ParallEL Lines with Enhanced Reconstruction) MRI acquisitions, which are popular for their robustness to motion artifacts. Our method operates in a few minutes on a single GPU, and to our knowledge is the first to correct for chemical shift in gradient echo PROPELLER MRI reconstruction without additional measurements or pretraining data.}
+  abstract = {Off-resonance artifacts in magnetic resonance imaging (MRI) are visual distortions that occur when the actual resonant frequencies of spins within the imaging volume differ from the expected frequencies used to encode spatial information. These discrepancies can be caused by a variety of factors, including magnetic field inhomogeneities, chemical shifts, or susceptibility differences within the tissues. Such artifacts can manifest as blurring, ghosting, or misregistration of the reconstructed image, and they often compromise its diagnostic quality. We propose to resolve these artifacts by lifting the 2D MRI reconstruction problem to 3D, introducing an additional "spectral" dimension to model this off-resonance. Our approach is inspired by recent progress in modeling radiance fields, and is capable of reconstructing both static and dynamic MR images as well as separating fat and water, which is of independent clinical interest. We demonstrate our approach in the context of PROPELLER (Periodically Rotated Overlapping ParallEL Lines with Enhanced Reconstruction) MRI acquisitions, which are popular for their robustness to motion artifacts. Our method operates in a few minutes on a single GPU, and to our knowledge is the first to correct for chemical shift in gradient echo PROPELLER MRI reconstruction without additional measurements or pretraining data.},
+  archiveprefix = {arXiv}
 }
 
-@unpublished{shift-with-generative-priors,
+@inproceedings{kheirandish2026klip,
+  title = {{{KLIP}}: {{Localized}} Distribution Shift Detection via {{KL-divergence}} with Diffusion Priors in Inverse Problems},
+  booktitle = {Proceedings of the {{IEEE}}/{{CVF}} Conference on Computer Vision and Pattern Recognition ({{CVPR}})},
+  author = {Kheirandish, Alireza and Hong, Jihoon and {Fridovich-Keil}, Sara},
+  year = 2026,
+  month = jun,
+  pages = {30823--30832},
+  url = {https://openaccess.thecvf.com/content/CVPR2026/papers/Kheirandish_KLIP_Localized_Distribution_Shift_Detection_via_KL-Divergence_with_Diffusion_Priors_CVPR_2026_paper.pdf},
+  abstract = {Diffusion models have shown promising performance as data-driven priors for computational imaging, as well as some capacity to detect out-of-distribution (OOD) images. However, existing approaches to OOD detection often require some knowledge of the shifted distribution, fail to detect subtle or localized distribution shifts, and operate on full images, rather than the indirect measurements available in inverse problems. We propose an OOD detection metric based on the Kullback-Leibler divergence between the diffusion prior and the posterior distribution, that (i) does not require any calibration data or knowledge of the shifted distribution, and (ii) can detect whole images as OOD as well as localize OOD patches within an image. Experimentally, we show that this metric can detect subtle yet semantically meaningful distribution shifts, such as the shift from healthy liver CT scans to those with tumors, and generalizes across different types of diffusion models, datasets, and inverse problems.}
+}
+
+@misc{kim2025distributionshift,
   title = {Towards Distribution-Shift Uncertainty Estimation for Inverse Problems with Generative Priors},
   author = {Kim, Namhoon and {Fridovich-Keil}, Sara},
   year = 2025,
   eprint = {2510.10947},
   primaryclass = {cs.CV},
-  archiveprefix = {arXiv},
   doi = {10.48550/arXiv.2510.10947},
-  abstract = {Generative models have shown strong potential as data-driven priors for solving inverse problems such as reconstructing medical images from undersampled measurements. While these priors improve reconstruction quality with fewer measurements, they risk hallucinating features when test images lie outside the training distribution. Existing uncertainty quantification methods in this setting (i) require an in-distribution calibration dataset, which may not be available, (ii) provide heuristic rather than statistical estimates, or (iii) quantify uncertainty from model capacity or limited measurements rather than distribution shift. We propose an instance-level, calibration-free uncertainty indicator that is sensitive to distribution shift, requires no knowledge of the training distribution, and incurs no retraining cost. Our key hypothesis is that reconstructions of in-distribution images remain stable under random measurement variations, while reconstructions of out-of-distribution (OOD) images exhibit greater instability. We use this stability as a proxy for detecting distribution shift. Our proposed OOD indicator is efficiently computable for any computational imaging inverse problem; we demonstrate it on tomographic reconstruction of MNIST digits, where a learned proximal network trained only on digit "0" is evaluated on all ten digits. Reconstructions of OOD digits show higher variability and correspondingly higher reconstruction error, validating this indicator. These results suggest a deployment strategy that pairs generative priors with lightweight guardrails, enabling aggressive measurement reduction for in-distribution cases while automatically warning when priors are applied out of distribution.}
+  abstract = {Generative models have shown strong potential as data-driven priors for solving inverse problems such as reconstructing medical images from undersampled measurements. While these priors improve reconstruction quality with fewer measurements, they risk hallucinating features when test images lie outside the training distribution. Existing uncertainty quantification methods in this setting (i) require an in-distribution calibration dataset, which may not be available, (ii) provide heuristic rather than statistical estimates, or (iii) quantify uncertainty from model capacity or limited measurements rather than distribution shift. We propose an instance-level, calibration-free uncertainty indicator that is sensitive to distribution shift, requires no knowledge of the training distribution, and incurs no retraining cost. Our key hypothesis is that reconstructions of in-distribution images remain stable under random measurement variations, while reconstructions of out-of-distribution (OOD) images exhibit greater instability. We use this stability as a proxy for detecting distribution shift. Our proposed OOD indicator is efficiently computable for any computational imaging inverse problem; we demonstrate it on tomographic reconstruction of MNIST digits, where a learned proximal network trained only on digit "0" is evaluated on all ten digits. Reconstructions of OOD digits show higher variability and correspondingly higher reconstruction error, validating this indicator. These results suggest a deployment strategy that pairs generative priors with lightweight guardrails, enabling aggressive measurement reduction for in-distribution cases while automatically warning when priors are applied out of distribution.},
+  archiveprefix = {arXiv}
 }
 
-@unpublished{3d-field-of-junctions,
-  title = {{{3D}} Field of Junctions: A Noise-Robust, Training-Free Structural Prior for Volumetric Inverse Problems},
-  author = {Kim, Namhoon and Moeini, Narges and Romberg, Justin and {Fridovich-Keil}, Sara},
-  year = 2026,
-  eprint = {2603.02149},
-  primaryclass = {cs.CV},
-  archiveprefix = {arXiv},
-  doi = {10.48550/arXiv.2603.02149},
-  abstract = {Volume denoising is a foundational problem in computational imaging, as many 3D imaging inverse problems face high levels of measurement noise. Inspired by the strong 2D image denoising properties of Field of Junctions (ICCV 2021), we propose a novel, fully volumetric 3D Field of Junctions (3D FoJ) representation that optimizes a junction of 3D wedges that best explain each 3D patch of a full volume, while encouraging consistency between overlapping patches. In addition to direct volume denoising, we leverage our 3D FoJ representation as a structural prior that: (i) requires no training data, and thus precludes the risk of hallucination, (ii) preserves and enhances sharp edge and corner structures in 3D, even under low signal to noise ratio (SNR), and (iii) can be used as a drop-in denoising representation via projected or proximal gradient descent for any volumetric inverse problem with low SNR. We demonstrate successful volume reconstruction and denoising with 3D FoJ across three diverse 3D imaging tasks with low-SNR measurements: low-dose X-ray computed tomography (CT), cryogenic electron tomography (cryo-ET), and denoising point clouds such as those from lidar in adverse weather. Across these challenging low-SNR volumetric imaging problems, 3D FoJ outperforms a mixture of classical and neural methods.}
-}
-
-@inproceedings{grids-vs-inrs,
+@inproceedings{kim2025grids,
   title = {Grids Often Outperform Implicit Neural Representation at Compressing Dense Signals},
   booktitle = {The Thirty-Ninth Annual Conference on Neural Information Processing Systems},
   author = {Kim, Namhoon and {Fridovich-Keil}, Sara},
   year = 2025,
-  link = {https://openreview.net/pdf?id=OZljvntsto},
+  url = {https://openreview.net/pdf?id=OZljvntsto},
   abstract = {Implicit Neural Representations (INRs) have recently shown impressive results, but their fundamental capacity, implicit biases, and scaling behavior remain poorly understood. We investigate the performance of diverse INRs across a suite of 2D and 3D real and synthetic signals with varying effective bandwidth, as well as both overfitting and generalization tasks including tomography, super-resolution, and denoising. By stratifying performance according to model size as well as signal type and bandwidth, our results shed light on how different INR and grid representations allocate their capacity. We find that, for most tasks and signals, a simple regularized grid with interpolation trains faster and to higher quality than any INR with the same number of parameters. We also find limited settings--namely fitting binary signals such as shape contours--where INRs outperform grids, to guide future development and use of INRs towards the most advantageous applications.}
 }
 
-@unpublished{perfusion-ct,
+@misc{kim20263d,
+  title = {{{3D}} Field of Junctions: A Noise-Robust, Training-Free Structural Prior for Volumetric Inverse Problems},
+  author = {Kim, Namhoon and Moeini, Narges and Romberg, Justin and {Fridovich-Keil}, Sara},
+  year = 2026,
+  month = mar,
+  eprint = {2603.02149},
+  primaryclass = {cs.CV},
+  doi = {10.48550/arXiv.2603.02149},
+  abstract = {Volume denoising is a foundational problem in computational imaging, as many 3D imaging inverse problems face high levels of measurement noise. Inspired by the strong 2D image denoising properties of Field of Junctions (ICCV 2021), we propose a novel, fully volumetric 3D Field of Junctions (3D FoJ) representation that optimizes a junction of 3D wedges that best explain each 3D patch of a full volume, while encouraging consistency between overlapping patches. In addition to direct volume denoising, we leverage our 3D FoJ representation as a structural prior that: (i) requires no training data, and thus precludes the risk of hallucination, (ii) preserves and enhances sharp edge and corner structures in 3D, even under low signal to noise ratio (SNR), and (iii) can be used as a drop-in denoising representation via projected or proximal gradient descent for any volumetric inverse problem with low SNR. We demonstrate successful volume reconstruction and denoising with 3D FoJ across three diverse 3D imaging tasks with low-SNR measurements: low-dose X-ray computed tomography (CT), cryogenic electron tomography (cryo-ET), and denoising point clouds such as those from lidar in adverse weather. Across these challenging low-SNR volumetric imaging problems, 3D FoJ outperforms a mixture of classical and neural methods.},
+  archiveprefix = {arXiv}
+}
+
+@misc{kim2026perfusion,
   title = {Perfusion Imaging and Single Material Reconstruction in Polychromatic Photon Counting {{CT}}},
   author = {Kim, Namhoon and Pananjady, Ashwin and Pourmorteza, Amir and {Fridovich-Keil}, Sara},
   year = 2026,
+  month = feb,
   eprint = {2602.02713},
   primaryclass = {physics.med-ph},
-  archiveprefix = {arXiv},
   doi = {10.48550/arXiv.2602.02713},
-  abstract = {Background: Perfusion computed tomography (CT) images the dynamics of a contrast agent through the body over time, and is one of the highest X-ray dose scans in medical imaging. Recently, a theoretically justified reconstruction algorithm based on a monotone variational inequality (VI) was proposed for single material polychromatic photon-counting CT, and showed promising early results at low-dose imaging. Purpose: We adapt this reconstruction algorithm for perfusion CT, to reconstruct the concentration map of the contrast agent while the static background tissue is assumed known; we call our method VI-PRISM (VI-based PeRfusion Imaging and Single Material reconstruction). We evaluate its potential for dose-reduced perfusion CT, using a digital phantom with water and iodine of varying concentration. Methods: Simulated iodine concentrations range from 0.05 to 2.5 mg/ml. The simulated X-ray source emits photons up to 100 keV, with average intensity ranging from     down to     photons per detector element. The number of tomographic projections was varied from 984 down to 8 to characterize the tradeoff in photon allocation between views and intensity. Results: We compare VI-PRISM against filtered back-projection (FBP), and find that VI-PRISM recovers iodine concentration with error below 0.4 mg/ml at all source intensity levels tested. Even with a dose reduction between 10x and 100x compared to FBP, VI-PRISM exhibits reconstruction quality on par with FBP. Conclusion: Across all photon budgets and angular sampling densities tested, VI-PRISM achieved consistently lower RMSE, reduced noise, and higher SNR compared to filtered back-projection. Even in extremely photon-limited and sparsely sampled regimes, VI-PRISM recovered iodine concentrations with errors below 0.4 mg/ml, showing that VI-PRISM can support accurate and dose-efficient perfusion imaging in photon-counting CT.}
+  abstract = {Background: Perfusion computed tomography (CT) images the dynamics of a contrast agent through the body over time, and is one of the highest X-ray dose scans in medical imaging. Recently, a theoretically justified reconstruction algorithm based on a monotone variational inequality (VI) was proposed for single material polychromatic photon-counting CT, and showed promising early results at low-dose imaging. Purpose: We adapt this reconstruction algorithm for perfusion CT, to reconstruct the concentration map of the contrast agent while the static background tissue is assumed known; we call our method VI-PRISM (VI-based PeRfusion Imaging and Single Material reconstruction). We evaluate its potential for dose-reduced perfusion CT, using a digital phantom with water and iodine of varying concentration. Methods: Simulated iodine concentrations range from 0.05 to 2.5 mg/ml. The simulated X-ray source emits photons up to 100 keV, with average intensity ranging from down to photons per detector element. The number of tomographic projections was varied from 984 down to 8 to characterize the tradeoff in photon allocation between views and intensity. Results: We compare VI-PRISM against filtered back-projection (FBP), and find that VI-PRISM recovers iodine concentration with error below 0.4 mg/ml at all source intensity levels tested. Even with a dose reduction between 10x and 100x compared to FBP, VI-PRISM exhibits reconstruction quality on par with FBP. Conclusion: Across all photon budgets and angular sampling densities tested, VI-PRISM achieved consistently lower RMSE, reduced noise, and higher SNR compared to filtered back-projection. Even in extremely photon-limited and sparsely sampled regimes, VI-PRISM recovered iodine concentrations with errors below 0.4 mg/ml, showing that VI-PRISM can support accurate and dose-efficient perfusion imaging in photon-counting CT.},
+  archiveprefix = {arXiv}
 }
 
-@unpublished{protein-space-ips,
+@misc{levy2025solving,
   title = {Solving Inverse Problems in Protein Space Using Diffusion-Based Priors},
   author = {Levy, Axel and Chan, Eric R. and {Fridovich-Keil}, Sara and Poitevin, Fr{\'e}d{\'e}ric and Zhong, Ellen D. and Wetzstein, Gordon},
   year = 2025,
   eprint = {2406.04239},
   primaryclass = {cs.LG},
-  archiveprefix = {arXiv},
   doi = {10.48550/arXiv.2406.04239},
-  abstract = {The interaction of a protein with its environment can be understood and controlled via its 3D structure. Experimental methods for protein structure determination, such as X-ray crystallography or cryogenic electron microscopy, shed light on biological processes but introduce challenging inverse problems. Learning-based approaches have emerged as accurate and efficient methods to solve these inverse problems for 3D structure determination, but are specialized for a predefined type of measurement. Here, we introduce a versatile framework to turn biophysical measurements, such as cryo-EM density maps, into 3D atomic models. Our method combines a physics-based forward model of the measurement process with a pretrained generative model providing a task-agnostic, data-driven prior. Our method outperforms posterior sampling baselines on linear and non-linear inverse problems. In particular, it is the first diffusion-based method for refining atomic models from cryo-EM maps and building atomic models from sparse distance matrices.}
+  abstract = {The interaction of a protein with its environment can be understood and controlled via its 3D structure. Experimental methods for protein structure determination, such as X-ray crystallography or cryogenic electron microscopy, shed light on biological processes but introduce challenging inverse problems. Learning-based approaches have emerged as accurate and efficient methods to solve these inverse problems for 3D structure determination, but are specialized for a predefined type of measurement. Here, we introduce a versatile framework to turn biophysical measurements, such as cryo-EM density maps, into 3D atomic models. Our method combines a physics-based forward model of the measurement process with a pretrained generative model providing a task-agnostic, data-driven prior. Our method outperforms posterior sampling baselines on linear and non-linear inverse problems. In particular, it is the first diffusion-based method for refining atomic models from cryo-EM maps and building atomic models from sparse distance matrices.},
+  archiveprefix = {arXiv}
 }
 
-@inproceedings{thermalnerf,
+@inproceedings{lin2024thermalnerf,
   title = {{{ThermalNeRF}}: {{Thermal}} Radiance Fields},
   booktitle = {2024 {{IEEE}} International Conference on Computational Photography ({{ICCP}})},
   author = {Lin, Yvette Y. and Pan, Xin-Yi and {Fridovich-Keil}, Sara and Wetzstein, Gordon},
@@ -185,10 +200,11 @@
   abstract = {Thermal imaging has a variety of applications, from agricultural monitoring to building inspection to imaging under poor visibility, such as in low light, fog, and rain. However, reconstructing thermal scenes in 3D presents several challenges due to the comparatively lower resolution and limited features present in long-wave infrared (LWIR) images. To overcome these challenges, we propose a unified framework for scene reconstruction from a set of LWIR and RGB images, using a multispectral radiance field to represent a scene viewed by both visible and infrared cameras, thus leveraging information across both spectra. We calibrate the RGB and infrared cameras with respect to each other, as a preprocessing step using a simple calibration target. We demonstrate our method on real-world sets of RGB and LWIR photographs captured from a handheld thermal camera, showing the effectiveness of our method at scene representation across the visible and infrared spectra. We show that our method is capable of thermal super-resolution, as well as visually removing obstacles to reveal objects that are occluded in either the RGB or thermal channels. Please see https://yvette256.github.io/thermalnerf/ for video results as well as our code and dataset release.}
 }
 
-@article{provable-fast-tr,
+@article{lou2026accurate,
   title = {Accurate, Provable, and Fast Polychromatic Tomographic Reconstruction: A Variational Inequality Approach},
   author = {Lou, Mengqi and Verchand, Kabir and {Fridovich-Keil}, Sara and Pananjady, Ashwin},
   year = 2026,
+  month = mar,
   journal = {SIAM Journal on Imaging Sciences},
   volume = {19},
   number = {1},
@@ -198,7 +214,7 @@
   abstract = {We consider the problem of signal reconstruction for computed tomography (CT) given a nonlinear forward model that accounts for exponential signal attenuation, a polychromatic X-ray source, general measurement noise (e.g., Poisson shot noise), and observations acquired over multiple wavelength windows. We develop a simple iterative algorithm for single-material reconstruction, which we call EXACT (EXtragradient Algorithm for Computed Tomography), based on formulating our estimate as the fixed point of a monotone variational inequality. We prove guarantees on the statistical and computational performance of EXACT given realistic assumptions on the measurement process. We also consider a recently introduced variant of this model with Gaussian measurements and present sample and iteration complexity bounds for EXACT that improve upon those of existing algorithms. We apply our EXACT algorithm to a CT phantom image recovery task and show that it often requires fewer X-ray views, lower source intensity, and less computation time to achieve similar reconstruction quality to existing methods. Code is available at https://github.com/voilalab/exact.}
 }
 
-@inproceedings{microfacetfields,
+@inproceedings{mai2023neural,
   title = {Neural Microfacet Fields for Inverse Rendering},
   booktitle = {Proceedings of the {{IEEE}}/{{CVF}} International Conference on Computer Vision ({{ICCV}})},
   author = {Mai, Alexander and Verbin, Dor and Kuester, Falko and {Fridovich-Keil}, Sara},
@@ -209,7 +225,19 @@
   abstract = {We present Neural Microfacet Fields, a method for recovering materials, geometry (volumetric density), and environmental illumination from a collection of images of a scene. Our method applies a microfacet reflectance model within a volumetric setting by treating each sample along the ray as a surface, rather than an emitter. Using surface-based Monte Carlo rendering in a volumetric setting enables our method to perform inverse rendering efficiently and enjoy recent advances in volume rendering. Our approach obtains similar performance as state-of-the-art methods for novel view synthesis and outperforms prior work in inverse rendering, capturing high fidelity geometry and high frequency illumination details.}
 }
 
-@article{dab-quant,
+@misc{nguyen2026bounding,
+  title = {Bounding Global and Local Compression Error of Signal Parameterizations},
+  author = {Nguyen, Quang Luong Nhat and {Fridovich-Keil}, Sara},
+  year = 2026,
+  month = may,
+  eprint = {2606.00126},
+  primaryclass = {eess.IV},
+  url = {https://arxiv.org/abs/2606.00126},
+  abstract = {Differentiable signal parameterizations such as implicit neural representations (INRs) and hybrid models are increasingly central to computational imaging, yet principled tools for evaluating reconstruction fidelity at finite model size remain limited when ground truth is unavailable. We introduce a framework for predicting the reconstruction error of compressive signal parameterizations, yielding non-asymptotic, signal-specific bounds that are both theoretically sound and efficiently computable without access to the ground truth signal. Specifically, we prove that when parameterization-based compression satisfies certain natural properties, the compression error at any compression level is bounded by a simple scaled difference between model predictions at different compression levels. We verify these properties for representative model families including interpolated grids, Fourier feature networks, multi-resolution hash encodings, and tensor factorizations, and show empirically that the resulting worst-case guarantees can be efficiently adapted into signal-specific error predictors that are tight and generalizable. Across direct fitting of synthetic and natural signals, and inverse problems including radiance field and MRI reconstruction, our method closely tracks global error curves and yields informative local error heatmaps without ground-truth access. Code is available at this https URL.},
+  archiveprefix = {arXiv}
+}
+
+@article{patel2022dabquant,
   title = {{{DAB-quant}}: {{An}} Open-Source Digital System for Quantifying Immunohistochemical Staining with 3,3{$\prime$}-Diaminobenzidine ({{DAB}})},
   author = {Patel, Sneh and {Fridovich-Keil}, Sara and Rasmussen, Shauna A. and {Fridovich-Keil}, Judith L.},
   year = 2022,
@@ -231,8 +259,17 @@
   year = 2019,
   volume = {32},
   publisher = {Curran Associates, Inc.},
-  link = {https://proceedings.neurips.cc/paper/2019/file/ee39e503b6bedf0c98c388b7e8589aca-Paper.pdf},
+  url = {https://proceedings.neurips.cc/paper/2019/file/ee39e503b6bedf0c98c388b7e8589aca-Paper.pdf},
   abstract = {We conduct the first large meta-analysis of overfitting due to test set reuse in the machine learning community. Our analysis is based on over one hundred machine learning competitions hosted on the Kaggle platform over the course of several years. In each competition, numerous practitioners repeatedly evaluated their progress against a holdout set that forms the basis of a public ranking available throughout the competition. Performance on a separate test set used only once determined the final ranking. By systematically comparing the public ranking with the final ranking, we assess how much participants adapted to the holdout set over the course of a competition. Our study shows, somewhat surprisingly, little evidence of substantial overfitting. These findings speak to the robustness of the holdout method across different data domains, loss functions, model classes, and human analysts.}
+}
+
+@inproceedings{sanda2025padismria,
+  title = {{{PaDIS-MRI}}: {{Patch-based}} Diffusion for Data-Efficient, Radiologist-Preferred {{MRI}} Reconstruction},
+  booktitle = {Machine Learning for Health 2025},
+  author = {Sanda, Rohan and Aali, Asad and Johnston, Andrew and Reis, Eduardo and Wetzstein, Gordon and {Fridovich-Keil}, Sara},
+  year = 2025,
+  url = {https://raw.githubusercontent.com/mlresearch/v297/main/assets/sanda26a/sanda26a.pdf},
+  abstract = {Magnetic resonance imaging (MRI) requires long acquisition times, which raise costs, reduce accessibility, and increase susceptibility to motion artifacts. Diffusion probabilistic models that learn data-driven priors may reduce acquisition time by enabling reconstruction from undersampled k-space measurements. However, they typically require large training datasets that can be prohibitively expensive to collect. Patch-based diffusion models have shown promise in learning effective data-driven priors over small real-valued datasets, but have not yet demonstrated clinical value in MRI. We extend the Patch-based Diffusion Inverse Solver (PaDIS) to complex-valued, multi-coil MRI reconstruction, and compare it against a state-of-the-art whole-image diffusion baseline (FastMRI-EDM) for 7x undersampled MRI reconstruction on the FastMRI brain dataset. We show that PaDIS-MRI models trained on small datasets of as few as 25 k-space images outperform FastMRI-EDM on image quality metrics (PSNR, SSIM, NRMSE), pixel-level mask-induced variability, cross-contrast/-modality generalization, and robustness to severe k-space undersampling. In a blinded study with three radiologists, PaDIS-MRI reconstructions were chosen as diagnostically superior in 91.7\% of cases, compared to baselines (i) FastMRI-EDM and (ii) classical convex reconstruction with wavelet sparsity. These findings highlight the potential of patch-based diffusion priors for high-fidelity MRI reconstruction in data-scarce clinical settings where diagnostic confidence matters.}
 }
 
 @inproceedings{shankar2020neural,
@@ -246,20 +283,20 @@
   volume = {119},
   pages = {8614--8623},
   publisher = {PMLR},
-  link = {https://proceedings.mlr.press/v119/shankar20a/shankar20a.pdf},
-  abstract = {We investigate the connections between neural networks and simple building blocks in kernel space. In particular, using well established feature space tools such as direct sum, averaging, and moment lifting, we present an algebra for creating “compositional” kernels from bags of features. We show that these operations correspond to many of the building blocks of “neural tangent kernels (NTK)”. Experimentally, we show that there is a correlation in test error between neural network architectures and the associated kernels. We construct a simple neural network architecture using only 3x3 convolutions, 2x2 average pooling, ReLU, and optimized with SGD and MSE loss that achieves 96% accuracy on CIFAR10, and whose corresponding compositional kernel achieves 90% accuracy. We also use our constructions to investigate the relative performance of neural networks, NTKs, and compositional kernels in the small dataset regime. In particular, we find that compositional kernels outperform NTKs and neural networks outperform both kernel methods. }
+  url = {https://proceedings.mlr.press/v119/shankar20a/shankar20a.pdf},
+  abstract = {We investigate the connections between neural networks and simple building blocks in kernel space. In particular, using well established feature space tools such as direct sum, averaging, and moment lifting, we present an algebra for creating ``compositional'' kernels from bags of features. We show that these operations correspond to many of the building blocks of ``neural tangent kernels (NTK)''. Experimentally, we show that there is a correlation in test error between neural network architectures and the associated kernels. We construct a simple neural network architecture using only 3x3 convolutions, 2x2 average pooling, ReLU, and optimized with SGD and MSE loss that achieves 96}
 }
 
-@inproceedings{GA-planes,
+@inproceedings{sivgin2025geometric,
   title = {Geometric Algebra Planes: {{Convex}} Implicit Neural Volumes},
   booktitle = {Forty-Second International Conference on Machine Learning},
   author = {Sivgin, Irmak and {Fridovich-Keil}, Sara and Wetzstein, Gordon and Pilanci, Mert},
   year = 2025,
-  link = {https://proceedings.mlr.press/v267/sivgin25a/sivgin25a.pdf},
+  url = {https://proceedings.mlr.press/v267/sivgin25a/sivgin25a.pdf},
   abstract = {Volume parameterizations abound in recent literature, encompassing methods from classic voxel grids to implicit neural representations. While implicit representations offer impressive capacity and improved memory efficiency compared to voxel grids, they traditionally require training through nonconvex optimization, which can be slow and sensitive to initialization and hyperparameters. We introduce GA-Planes, a novel family of implicit neural volume representations inspired by Geometric Algebra that can be trained using convex optimization, addressing the limitations of nonconvex methods. GA-Planes models generalize many existing representations including any combination of features stored in tensor basis elements followed by a neural feature decoder, and can be adapted to convex or nonconvex training as needed for various inverse problems. In the 2D setting, we prove GA-Planes models are equivalent to a low-rank plus low-resolution matrix factorization that outperforms the classic low-rank plus sparse decomposition for fitting a natural image. In 3D, GA-Planes models exhibit competitive expressiveness, model size, and optimizability across tasks such as radiance field reconstruction, 3D segmentation, and video segmentation.}
 }
 
-@inproceedings{tancik2020fouriera,
+@inproceedings{tancik2020fourier,
   title = {Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains},
   booktitle = {Advances in Neural Information Processing Systems},
   author = {Tancik, Matthew and Srinivasan, Pratul and Mildenhall, Ben and {Fridovich-Keil}, Sara and Raghavan, Nithin and Singhal, Utkarsh and Ramamoorthi, Ravi and Barron, Jonathan and Ng, Ren},
@@ -268,19 +305,18 @@
   volume = {33},
   pages = {7537--7547},
   publisher = {Curran Associates, Inc.},
-  link = {https://proceedings.neurips.cc/paper/2020/file/55053683268957697aa39fba6f231c68-Paper.pdf},
+  url = {https://proceedings.neurips.cc/paper/2020/file/55053683268957697aa39fba6f231c68-Paper.pdf},
   abstract = {We show that passing input points through a simple Fourier feature mapping enables a multilayer perceptron (MLP) to learn high-frequency functions in low-dimensional problem domains. These results shed light on recent advances in computer vision and graphics that achieve state-of-the-art results by using MLPs to represent complex 3D objects and scenes. Using tools from the neural tangent kernel (NTK) literature, we show that a standard MLP has impractically slow convergence to high frequency signal components. To overcome this spectral bias, we use a Fourier feature mapping to transform the effective NTK into a stationary kernel with a tunable bandwidth. We suggest an approach for selecting problem-specific Fourier features that greatly improves the performance of MLPs for low-dimensional regression tasks relevant to the computer vision and graphics communities.}
 }
 
-@inproceedings{mistakes-on-imagenet,
+@inproceedings{vasudevan2022when,
   title = {When Does Dough Become a Bagel? {{Analyzing}} the Remaining Mistakes on {{ImageNet}}},
   booktitle = {Advances in Neural Information Processing Systems},
   author = {Vasudevan, Vijay and Caine, Benjamin and Gontijo Lopes, Raphael and {Fridovich-Keil}, Sara and Roelofs, Rebecca},
-  editor = {Koyejo, S. and Mohamed, S. and Agarwal, A. and Belgrave, D. and Cho, K. and Oh, A.},
   year = 2022,
   volume = {35},
   pages = {6720--6734},
   publisher = {Curran Associates, Inc.},
-  link = {https://proceedings.neurips.cc/paper_files/paper/2022/file/2cd5737c59645f7ef23b2842b705edf2-Paper-Conference.pdf},
+  url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/2cd5737c59645f7ef23b2842b705edf2-Paper-Conference.pdf},
   abstract = {Image classification accuracy on the ImageNet dataset has been a barometer for progress in computer vision over the last decade. Several recent papers have questioned the degree to which the benchmark remains useful to the community, yet innovations continue to contribute gains to performance, with today's largest models achieving 90\%+ top-1 accuracy. To help contextualize progress on ImageNet and provide a more meaningful evaluation for today's state-of-the-art models, we manually review and categorize every remaining mistake that a few top models make in order to provide insight into the long-tail of errors on one of the most benchmarked datasets in computer vision. We focus on the multi-label subset evaluation of ImageNet, where today's best models achieve upwards of 97\% top-1 accuracy. Our analysis reveals that nearly half of the supposed mistakes are not mistakes at all, and we uncover new valid multi-labels, demonstrating that, without careful review, we are significantly underestimating the performance of these models. On the other hand, we also find that today's best models still make a significant number of mistakes (40\%) that are obviously wrong to human reviewers. To calibrate future progress on ImageNet, we provide an updated multi-label evaluation set, and we curate ImageNet-Major: a 68-example" major error" slice of the obvious mistakes made by today's top models--a slice where models should achieve near perfection, but today are far from doing so.}
 }
