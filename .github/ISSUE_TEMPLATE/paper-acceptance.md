@@ -19,6 +19,7 @@ Just give me **one** of the two options below, and I'll update the website and w
 Paste a link to the paper's abstract page or the official PDF from the venue's website. See the [link guide](#link-guide) for examples. Provide this information as follows:
 
 ```yaml
+acceptance-date:
 link:
 ```
 
@@ -27,6 +28,7 @@ link:
 If you don't have a official link from the venue, fill in all four so that I can find it:
 
 ```yaml
+acceptance-date:
 title:    # full title
 authors:  # full author list, in order
 venue:    # venue name, e.g. "NeurIPS", "CVPR", etc.

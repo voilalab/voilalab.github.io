@@ -104,7 +104,7 @@
 @inproceedings{fridovich-keilsaraandmeantigiacomo2023kplanes,
   title = {K-Planes: {{Explicit}} Radiance Fields in Space, Time, and Appearance},
   booktitle = {Proceedings of the {{IEEE}}/{{CVF}} Conference on Computer Vision and Pattern Recognition ({{CVPR}})},
-  author = {{Fridovich-Keil}, Sara and Meanti, Giacomo and Warburg, Frederik Rahb{\ae}k and Recht, Benjamin and Kanazawa, Angjoo},
+  author = {{Fridovich-Keil, Sara and Meanti, Giacomo} and Warburg, Frederik Rahb{\ae}k and Recht, Benjamin and Kanazawa, Angjoo},
   year = 2023,
   month = jun,
   pages = {12479--12488},
@@ -154,16 +154,13 @@
   abstract = {Implicit Neural Representations (INRs) have recently shown impressive results, but their fundamental capacity, implicit biases, and scaling behavior remain poorly understood. We investigate the performance of diverse INRs across a suite of 2D and 3D real and synthetic signals with varying effective bandwidth, as well as both overfitting and generalization tasks including tomography, super-resolution, and denoising. By stratifying performance according to model size as well as signal type and bandwidth, our results shed light on how different INR and grid representations allocate their capacity. We find that, for most tasks and signals, a simple regularized grid with interpolation trains faster and to higher quality than any INR with the same number of parameters. We also find limited settings--namely fitting binary signals such as shape contours--where INRs outperform grids, to guide future development and use of INRs towards the most advantageous applications.}
 }
 
-@misc{kim20263d,
-  title = {{{3D}} Field of Junctions: A Noise-Robust, Training-Free Structural Prior for Volumetric Inverse Problems},
+@inproceedings{kim20263d,
+  title = {{{3D Field}} of {{Junctions}}: {{A Noise-Robust}}, {{Training-Free Structural Prior}} for {{Volumetric Inverse Problems}}},
+  booktitle = {The 19th {{European Conference}} on {{Computer Vision}}},
   author = {Kim, Namhoon and Moeini, Narges and Romberg, Justin and {Fridovich-Keil}, Sara},
   year = 2026,
-  month = mar,
-  eprint = {2603.02149},
-  primaryclass = {cs.CV},
-  doi = {10.48550/arXiv.2603.02149},
-  abstract = {Volume denoising is a foundational problem in computational imaging, as many 3D imaging inverse problems face high levels of measurement noise. Inspired by the strong 2D image denoising properties of Field of Junctions (ICCV 2021), we propose a novel, fully volumetric 3D Field of Junctions (3D FoJ) representation that optimizes a junction of 3D wedges that best explain each 3D patch of a full volume, while encouraging consistency between overlapping patches. In addition to direct volume denoising, we leverage our 3D FoJ representation as a structural prior that: (i) requires no training data, and thus precludes the risk of hallucination, (ii) preserves and enhances sharp edge and corner structures in 3D, even under low signal to noise ratio (SNR), and (iii) can be used as a drop-in denoising representation via projected or proximal gradient descent for any volumetric inverse problem with low SNR. We demonstrate successful volume reconstruction and denoising with 3D FoJ across three diverse 3D imaging tasks with low-SNR measurements: low-dose X-ray computed tomography (CT), cryogenic electron tomography (cryo-ET), and denoising point clouds such as those from lidar in adverse weather. Across these challenging low-SNR volumetric imaging problems, 3D FoJ outperforms a mixture of classical and neural methods.},
-  archiveprefix = {arXiv}
+  url = {https://arxiv.org/abs/2603.02149},
+  abstract = {Volume denoising is a foundational problem in computational imaging, as many 3D imaging inverse problems face high levels of measurement noise. Inspired by the strong 2D image denoising properties of Field of Junctions (ICCV 2021), we propose a novel, fully volumetric 3D Field of Junctions (3D FoJ) representation that optimizes a junction of 3D wedges that best explain each 3D patch of a full volume, while encouraging consistency between overlapping patches. In addition to direct volume denoising, we leverage our 3D FoJ representation as a structural prior that: (i) requires no training data, and thus precludes the risk of hallucination, (ii) preserves and enhances sharp edge and corner structures in 3D, even under low signal to noise ratio (SNR), and (iii) can be used as a drop-in denoising representation via projected or proximal gradient descent for any volumetric inverse problem with low SNR. We demonstrate successful volume reconstruction and denoising with 3D FoJ across three diverse 3D imaging tasks with low-SNR measurements: low-dose X-ray computed tomography (CT), cryogenic electron tomography (cryo-ET), and denoising point clouds such as those from lidar in adverse weather. Across these challenging low-SNR volumetric imaging problems, 3D FoJ outperforms a mixture of classical and neural methods.}
 }
 
 @misc{kim2026perfusion,
