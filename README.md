@@ -38,6 +38,26 @@ Push to `main`. GitHub Actions (`.github/workflows/deploy.yml`) builds Jekyll, r
 
 There is no manual deploy step and no staging environment.
 
+### Project pages
+
+Publication project pages keep their metadata, Markdown, and relative assets in
+the publication repository. `_data/project_pages.yml` pins each source commit;
+the deploy workflow validates and imports those sources before Jekyll runs. The
+website owns the layout, navbar, footer, search integration, and shared project
+styles.
+
+To preview uncommitted project-page source locally:
+
+```bash
+bundle exec ruby scripts/import_project_pages.rb \
+  --local diagnosing-posterior-sampling=/path/to/diagnosing-posterior-sampling
+bundle exec jekyll serve
+```
+
+Generated `_project_pages/` files and project asset directories are ignored.
+Update a project page by committing its source first, then changing the pinned
+SHA in `_data/project_pages.yml`.
+
 ## Where things live
 
 | Want to change... | Edit |
@@ -52,6 +72,8 @@ There is no manual deploy step and no staging environment.
 | Navbar items / order | `_config.yml` (`nav_pages:`) |
 | Footer copy / contact links | `_config.yml` (`about:`, `information:`) |
 | Site styling | `_sass/SHB_css.scss` |
+| Shared project-page styling | `_sass/_project-page.scss` |
+| Imported project page | Publication repository `docsrc/`; pin in `_data/project_pages.yml` |
 | Citation rendering style | `shb.csl` (CSL file) + `_config.yml` (`scholar.style:`) |
 
 ## Common gotchas
@@ -74,6 +96,7 @@ _includes/           partials used by layouts
 _layouts/            page templates
 _pages/              top-level pages (home, team, research, papers, ...)
 _plugins/            Ruby plugins (news_date_processor.rb)
+scripts/             Build-time project-page importer
 _sass/SHB_css.scss   stylesheet
 assets/              ref.bib, main.scss, vendored JS, downloadable PDFs
 images/              teampic/, research/, logopic/
