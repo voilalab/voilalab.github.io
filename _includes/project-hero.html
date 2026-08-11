@@ -1,0 +1,24 @@
+<header class="project-hero" id="top">
+  <p class="project-eyebrow">VOILA Lab @ GT <span aria-hidden="true">/</span> {{ page.project.venue }} {{ page.project.year }}</p>
+  <h1 itemprop="headline">{{ page.project.title }}</h1>
+  <p class="project-subtitle">{{ page.project.subtitle }}</p>
+  <div class="project-authors" itemprop="author">
+    {% for author in page.project.authors %}
+      <a href="{{ author.url }}">{{ author.name }}</a>
+    {% endfor %}
+  </div>
+  <p class="project-affiliation">{{ page.project.affiliation }}</p>
+  <div class="project-actions" aria-label="Project links">
+    {% for link in page.project.links %}
+      <a class="btn {% if forloop.first %}btn-primary{% else %}btn-secondary{% endif %}" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }} <span aria-hidden="true">↗</span></a>
+    {% endfor %}
+    <a class="btn btn-secondary" href="#citation">BibTeX <span aria-hidden="true">↓</span></a>
+  </div>
+  {% if page.project.hero_image %}
+    {% assign hero_asset = page.url | append: page.project.hero_image | relative_url %}
+    {% assign hero_metadata = page.project.assets | where: "path", page.project.hero_image | first %}
+    <figure class="project-hero-figure">
+      <img src="{{ hero_asset }}" alt="{{ hero_metadata.alt | escape }}" itemprop="image">
+    </figure>
+  {% endif %}
+</header>

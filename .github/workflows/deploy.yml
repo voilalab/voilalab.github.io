@@ -35,6 +35,9 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Import project pages
+        run: bundle exec ruby scripts/import_project_pages.rb
+
       - name: Build site
         run: bundle exec jekyll build
         env:
