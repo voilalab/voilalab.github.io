@@ -1,5 +1,10 @@
 <header class="project-hero" id="top">
-  <p class="project-eyebrow">VOILA Lab @ GT <span aria-hidden="true">/</span> {{ page.project.venue }} {{ page.project.year }}</p>
+  <p class="project-eyebrow">
+    <span class="project-lab">VOILA Lab @ GT</span>
+    <span class="project-divider" aria-hidden="true">/</span>
+    <span class="project-venue">{{ page.project.venue }}</span>
+    <span class="project-year">{{ page.project.year }}</span>
+  </p>
   <h1 itemprop="headline">{{ page.project.title }}</h1>
   <p class="project-subtitle">{{ page.project.subtitle }}</p>
   <div class="project-authors" itemprop="author">
