@@ -51,6 +51,10 @@ ol li{
 {{ ref }}</div>
 
 <div style="margin-top:4px;">
+{% if extra.project %}
+<a href="{{ extra.project }}" target="_blank"><button class="btn btn-info bib-btn">PROJECT</button></a>
+{% endif %}
+
 {% if entry.doi %}
 <a href="{{ entry.doi | prepend: 'https://doi.org/' }}" target="_blank"><button class="btn btn-info bib-btn">PAPER</button></a>
 {% elsif entry.url %}
@@ -59,10 +63,6 @@ ol li{
 
 {% if extra.code %}
 <a href="{{ extra.code }}" target="_blank"><button class="btn btn-info bib-btn">CODE</button></a>
-{% endif %}
-
-{% if extra.project %}
-<a href="{{ extra.project }}" target="_blank"><button class="btn btn-info bib-btn">PROJECT</button></a>
 {% endif %}
 
 <button type="button" class="btn btn-info bib-btn bib-toggle" style="opacity:0.7;" data-bib-target="a{{entry.key}}">BIB</button>
