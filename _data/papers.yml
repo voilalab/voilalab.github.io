@@ -38,9 +38,11 @@ ghosh2023volumetric:
 
 kim2025distributionshift:
   code: https://github.com/voilalab/uncertainty_quantification_LPN
+  project: https://voilalab.github.io/uncertainty_quantification_LPN/
 
 kim2025grids:
   code: https://github.com/voilalab/INR-benchmark
+  project: https://voilalab.github.io/INR-benchmark/
 
 kim2026perfusion:
   code: https://github.com/voilalab/VI-PRISM
