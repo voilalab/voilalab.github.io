@@ -1,0 +1,7 @@
+{% if page.project.sections %}
+<nav class="project-section-nav" aria-label="Project page sections">
+  {% for section in page.project.sections %}
+    <a href="#{{ section.id }}">{{ section.label }}</a>
+  {% endfor %}
+</nav>
+{% endif %}
