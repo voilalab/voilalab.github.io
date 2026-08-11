@@ -1,7 +1,8 @@
 # Presentation-only metadata for the papers page, merged into _layouts/bibtemplate.html
 # by bib citation key (entry.key). All fields optional. Keys must match ref.bib exactly.
 #
-#   code:  GitHub repo URL -> renders a CODE button
+#   code:     GitHub repo URL -> renders a CODE button
+#   project:  Project-page URL -> renders a PROJECT button
 #   badge: explicit override for the left-column pill label (e.g. "PREPRINT").
 #          Normally unnecessary: arXiv entries get a PREPRINT badge automatically from
 #          their archiveprefix field, and article/inproceedings/report get JOURNAL/
@@ -76,6 +77,7 @@ vasudevan2022when:
 
 kim20263d:
   code: https://github.com/voilalab/3D-Field-of-Junctions
+  project: https://voilalab.github.io/3D-Field-of-Junctions/
 
 burns2026when:
   code: https://github.com/voilalab/diagnosing-posterior-sampling

@@ -24,7 +24,17 @@ Our lab's research applies techniques from machine learning, signal processing, 
 </ul>
 <div class="research-footer" markdown="0">
 {% if theme.papers %}<span class="research-pubs"><i class="fas fa-file-alt"></i> {% for paper in theme.papers %}<a href="{{ site.url }}{{ site.baseurl }}/papers/#{{ paper.key }}">{{ paper.text }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</span>{% endif %}
-{% if theme.papers %}{% capture codelinks %}{% for paper in theme.papers %}{% assign meta = site.data.papers[paper.key] %}{% if meta.code %}<a href="{{ meta.code }}" target="_blank" rel="noopener noreferrer" class="research-link"><i class="fab fa-github"></i> {{ paper.text }}</a>{% endif %}{% endfor %}{% endcapture %}{% if codelinks != "" %}<div class="research-links">{{ codelinks }}</div>{% endif %}{% endif %}
+{% if theme.papers %}
+{% capture resource_links %}
+{% for paper in theme.papers %}
+{% assign meta = site.data.papers[paper.key] %}
+{% if meta.project %}<a href="{{ meta.project }}" target="_blank" rel="noopener noreferrer" class="research-link"><i class="fas fa-external-link-alt"></i> {{ paper.text }} project</a>{% endif %}
+{% if meta.code %}<a href="{{ meta.code }}" target="_blank" rel="noopener noreferrer" class="research-link"><i class="fab fa-github"></i> {{ paper.text }} code</a>{% endif %}
+{% endfor %}
+{% endcapture %}
+{% assign resource_links = resource_links | strip %}
+{% if resource_links != "" %}<div class="research-links">{{ resource_links }}</div>{% endif %}
+{% endif %}
 </div>
 </div>
 </div>
