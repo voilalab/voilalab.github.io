@@ -37,7 +37,6 @@ ghosh2023volumetric:
   code: https://github.com/sarafridov/volumetric-propeller
 
 kim2025distributionshift:
-  badge: CAMSAP
   code: https://github.com/voilalab/uncertainty_quantification_LPN
   project: https://voilalab.github.io/uncertainty_quantification_LPN/
 
