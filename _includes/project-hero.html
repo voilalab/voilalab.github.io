@@ -24,6 +24,7 @@
     {% assign hero_metadata = page.project.assets | where: "path", page.project.hero_image | first %}
     <figure class="project-hero-figure">
       <img src="{{ hero_asset }}" alt="{{ hero_metadata.alt | escape }}" itemprop="image">
+      {% if page.project.hero_caption %}<figcaption>{{ page.project.hero_caption }}</figcaption>{% endif %}
     </figure>
   {% endif %}
 </header>
