@@ -58,6 +58,8 @@ Generated `_project_pages/` files and project asset directories are ignored.
 Update a project page by committing its source first, then changing the pinned
 SHA in `_data/project_pages.yml`.
 
+Ask Ben about this for more info.
+
 ## Where things live
 
 | Want to change... | Edit |
