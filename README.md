@@ -8,12 +8,11 @@ Jekyll site, forked from [`sbryngelson/academic-website-template`](https://githu
 
 Pick the issue template that matches what you want to change — each opens a pre-filled issue:
 
-1. [My team page info needs updating](https://github.com/voilalab/voilalab.github.io/issues/new?template=member-update.md)
-2. [I'm a new lab member and not yet on the team page](https://github.com/voilalab/voilalab.github.io/issues/new?template=member-addition.md)
-3. [A paper of ours was accepted to a venue](https://github.com/voilalab/voilalab.github.io/issues/new?template=paper-acceptance.md)
-4. [A paper of ours was posted on arXiv](https://github.com/voilalab/voilalab.github.io/issues/new?template=paper-arxiv.md)
-5. [Other news — a talk, award, fellowship, etc.](https://github.com/voilalab/voilalab.github.io/issues/new?template=news.md)
-6. [Something else](https://github.com/voilalab/voilalab.github.io/issues/new)
+1. [My team page info needs updating](https://github.com/voilalab/voilalab.github.io/issues/new?template=1_member-update.yml)
+2. [I'm a new lab member and not yet on the team page](https://github.com/voilalab/voilalab.github.io/issues/new?template=2_member-addition.yml)
+3. [A paper of ours was accepted to a venue](https://github.com/voilalab/voilalab.github.io/issues/new?template=3_paper-acceptance.yml)
+4. [A paper of ours was posted on arXiv](https://github.com/voilalab/voilalab.github.io/issues/new?template=4_paper-arxiv.yml)
+5. [Other news - a talk, award, fellowship, etc.](https://github.com/voilalab/voilalab.github.io/issues/new?template=5_news.yml)
 
 ## Quick start
 

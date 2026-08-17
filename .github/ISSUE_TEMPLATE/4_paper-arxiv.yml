@@ -1,0 +1,58 @@
+name: New paper (preprint / arXiv)
+description: A paper of ours is publicly available for the first time
+title: "[New paper] "
+labels:
+  - new
+assignees:
+  - bburns-ds
+body:
+  - type: markdown
+    attributes:
+      value: |
+        I will pull the title, author list, and abstract from the paper link and write the corresponding news entry.
+
+  - type: input
+    id: paper-link
+    attributes:
+      label: Paper URL
+      description: An arXiv abstract, HTML, or PDF URL will work.
+      placeholder: https://arxiv.org/abs/2112.05131
+    validations:
+      required: true
+
+  - type: input
+    id: code
+    attributes:
+      label: Public code URL
+      description: If public code is available, provide its repository URL.
+      placeholder: https://github.com/...
+
+  - type: checkboxes
+    id: code-acknowledgement
+    attributes:
+      label: Code availability
+      options:
+        - label: I have provided the public code URL above, or no public code is currently available.
+          required: true
+
+  - type: dropdown
+    id: research-areas
+    attributes:
+      label: Research areas
+      description: Select every research-page theme that applies.
+      multiple: true
+      options:
+        - 3D reconstruction and representation
+        - Medical imaging
+        - Machine learning foundations
+        - Generative priors for inverse problems
+        - Identifying and tackling distribution shift
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Add context for "Other / not sure" or anything else I should know.

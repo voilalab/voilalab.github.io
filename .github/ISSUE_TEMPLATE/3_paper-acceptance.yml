@@ -1,0 +1,82 @@
+name: Paper acceptance
+description: A paper of ours has been accepted to a conference, journal, or workshop
+title: "[Paper acceptance] "
+labels:
+  - update
+assignees:
+  - bburns-ds
+body:
+  - type: input
+    id: acceptance-date
+    attributes:
+      label: Acceptance date
+      placeholder: March 15, 2026
+    validations:
+      required: true
+
+  - type: input
+    id: paper-link
+    attributes:
+      label: Official paper URL
+      description: Link to the abstract page or official PDF on the venue's website. This is preferred; if unavailable, complete all four paper-detail fields below.
+      placeholder: https://...
+
+  - type: input
+    id: title
+    attributes:
+      label: Paper title
+
+  - type: textarea
+    id: authors
+    attributes:
+      label: Authors
+      description: Enter the full author list in order.
+
+  - type: input
+    id: venue
+    attributes:
+      label: Venue
+      placeholder: NeurIPS, CVPR, or another venue
+
+  - type: input
+    id: year
+    attributes:
+      label: Publication year
+      placeholder: "2026"
+
+  - type: input
+    id: code
+    attributes:
+      label: Public code URL
+      description: If public code is available, provide its repository URL.
+      placeholder: https://github.com/...
+
+  - type: checkboxes
+    id: code-acknowledgement
+    attributes:
+      label: Code availability
+      options:
+        - label: I have provided the public code URL above, or no public code is currently available.
+          required: true
+
+  - type: dropdown
+    id: research-areas
+    attributes:
+      label: Research areas
+      description: Select every research-page theme that applies.
+      multiple: true
+      options:
+        - 3D reconstruction and representation
+        - Medical imaging
+        - Machine learning foundations
+        - Generative priors for inverse problems
+        - Identifying and tackling distribution shift
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Add context for "Other / not sure" or anything else I should know.
