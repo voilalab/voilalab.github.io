@@ -1,0 +1,81 @@
+name: Update team page entry
+description: My existing team page entry needs changes to its role, links, photo, or other details
+title: "[Team member update] "
+labels:
+  - update
+assignees:
+  - bburns-ds
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Select every field that needs to change, then enter the new information below. To remove a field, select it in the dropdown and leave its corresponding input blank.
+
+  - type: input
+    id: member-name
+    attributes:
+      label: Current name
+      description: What name currently appears on the team page?
+      placeholder: Jane Doe
+    validations:
+      required: true
+
+  - type: dropdown
+    id: fields
+    attributes:
+      label: Fields to update
+      description: Select every field that should be changed or removed.
+      multiple: true
+      options:
+        - Headshot
+        - Name
+        - Role
+        - Notes
+        - Email
+        - LinkedIn
+        - GitHub
+        - Website
+        - Google Scholar
+        - ResearchGate
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: New name
+
+  - type: input
+    id: info
+    attributes:
+      label: New role
+      placeholder: PhD student
+
+  - type: input
+    id: notes
+    attributes:
+      label: New notes
+      placeholder: NSF GRFP or co-advised with...
+
+  - type: input
+    id: email
+    attributes:
+      label: New email
+
+  - type: textarea
+    id: profile-links
+    attributes:
+      label: New profile links
+      description: Enter the new value for each selected link field. Omit fields that are not changing.
+      placeholder: |
+        LinkedIn:
+        GitHub:
+        Website:
+        Google Scholar:
+        ResearchGate:
+
+  - type: textarea
+    id: headshot
+    attributes:
+      label: New headshot
+      description: If replacing your headshot, drag and drop the new image into this field.

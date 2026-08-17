@@ -1,0 +1,45 @@
+name: News entry
+description: A talk, award, grant, lab milestone, or other news unrelated to a paper release or acceptance
+title: "[News] "
+labels:
+  - new
+assignees:
+  - bburns-ds
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Submit one news entry per issue. Use the dedicated paper templates for new papers and paper acceptances.
+
+  - type: input
+    id: date
+    attributes:
+      label: Date
+      placeholder: March 15, 2026
+    validations:
+      required: true
+
+  - type: dropdown
+    id: submission-type
+    attributes:
+      label: Submission type
+      options:
+        - Headline (to be used verbatim)
+        - Description (want Ben to write headline)
+    validations:
+      required: true
+
+  - type: textarea
+    id: content
+    attributes:
+      label: Headline or description
+      description: Enter either the finished headline or the information Ben should use to write one, according to your selection above.
+      placeholder: Our lab was awarded a GTRI Fellowship!
+    validations:
+      required: true
+
+  - type: textarea
+    id: links
+    attributes:
+      label: Links or additional context
+      description: Add any relevant links or background information.

@@ -1,0 +1,68 @@
+name: New team page entry
+description: I am a new lab member and do not yet appear on the team page
+title: "[New team member] "
+labels:
+  - new
+assignees:
+  - bburns-ds
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: Jane Doe
+    validations:
+      required: true
+
+  - type: input
+    id: info
+    attributes:
+      label: Role
+      placeholder: PhD student
+    validations:
+      required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: Email
+      placeholder: jane.doe@example.com
+    validations:
+      required: true
+
+  - type: input
+    id: notes
+    attributes:
+      label: Notes
+      placeholder: NSF GRFP or co-advised with...
+
+  - type: input
+    id: linkedin
+    attributes:
+      label: LinkedIn URL
+
+  - type: input
+    id: github
+    attributes:
+      label: GitHub URL
+
+  - type: input
+    id: website
+    attributes:
+      label: Website URL
+
+  - type: input
+    id: scholar
+    attributes:
+      label: Google Scholar URL
+
+  - type: input
+    id: researchgate
+    attributes:
+      label: ResearchGate URL
+
+  - type: textarea
+    id: headshot
+    attributes:
+      label: Headshot
+      description: Drag and drop your headshot into this field. If you do not include one, I will use Buzz, the Georgia Tech mascot, instead.
