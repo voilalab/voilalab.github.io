@@ -49,7 +49,7 @@ To preview uncommitted project-page source locally:
 
 ```bash
 bundle exec ruby scripts/import_project_pages.rb \
-  --local diagnosing-posterior-sampling=/path/to/diagnosing-posterior-sampling
+  --local PROJECT_SLUG=/path/to/publication-repository
 bundle exec jekyll serve
 ```
 
