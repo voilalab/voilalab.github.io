@@ -83,7 +83,6 @@ kim20263d:
 
 burns2026when:
   code: https://github.com/voilalab/diagnosing-posterior-sampling
-  project: /diagnosing-posterior-sampling/
 
 nguyen2026bounding:
   code: https://github.com/voilalab/global_error_bound
