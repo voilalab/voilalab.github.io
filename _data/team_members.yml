@@ -71,25 +71,15 @@
   # website:
   # researchgate:
 
-- name: Sarvesh Sundaram
-  photo: sarvesh
-  info: MS student
-  email: ssundaram62@gatech.edu
-  linkedin: https://www.linkedin.com/in/sarvesh-sundaram/
-  github: https://github.com/SMZCartoons
-  website: https://sarveshsundaram.vercel.app
-  # scholar
-  # researchgate
-
-- name: Aditya Pandey
-  photo: buzz
-  info: MS student
-  email: apandey369@gatech.edu
-  # linkedin:
-  # github:
-  # website:
-  # scholar:
-  # researchgate:
+# - name: Aditya Pandey
+#   photo: buzz
+#   info: MS student
+#   email: apandey369@gatech.edu
+#   # linkedin:
+#   # github:
+#   # website:
+#   # scholar:
+#   # researchgate:
 
 - name: Merve Kocabas
   photo: buzz

@@ -9,7 +9,7 @@ permalink: /team/
 
 <center>	
 <img src="{{site.url}}{{site.baseurl}}/images/teampic/team-summer-2026.jpeg" width="100%" style='border-radius: 8px;' alt="Group photo of VOILA Lab members"/>
-<b>L to R</b>: Al, Kent, Ben, Sungwon, Sara, Quang, Namhoon, Jihoon, Merve. <br/><b>Not Pictured</b>: Aditya, Sarvesh <br/>
+<b>L to R</b>: Al, Kent, Ben, Sungwon, Sara, Quang, Namhoon, Jihoon, Merve.
 </center>
 
 <!-- ### PI -->
@@ -80,29 +80,29 @@ permalink: /team/
 <div class="row">
 <div class="col-sm-12 clearfix">
 {% for member in site.data.alumni_phd %}
-* {{ member.name }}. <i>{{ member.info }}</i> <br> <b>Dissertation:</b> {{member.dissertation}}
+* {% if member.link %}<a href="{{ member.link }}" target="_blank" rel="noopener noreferrer">{{ member.name }}</a>{% else %}{{ member.name }}{% endif %}. <i>{{ member.info }}</i> <br> <b>Dissertation:</b> {{member.dissertation}}
 {% endfor %}
 </div>
 </div>
 </div> -->
 
-<!-- ### MS alumni
+### MS alumni
 <div class="jumbotron">
 <div class="row">
 <div class="col-sm-12 clearfix">
 {% for member in site.data.alumni_ms %}
-* {{ member.name }}. <i>{{ member.info }}</i>
+* {% if member.link %}<a href="{{ member.link }}" target="_blank" rel="noopener noreferrer">{{ member.name }}</a>{% else %}{{ member.name }}{% endif %}. <i>{{ member.info }}</i>
 {% endfor %}
 </div>
 </div>
-</div> -->
+</div>
 
 <!-- ### Undergraduate alumni
 <div class="jumbotron">
 <div class="row">
 <div class="col-sm-12 clearfix">
 {% for member in site.data.alumni_bsms %}
-* {{ member.name }}. <i>{{ member.info }}</i>
+* {% if member.link %}<a href="{{ member.link }}" target="_blank" rel="noopener noreferrer">{{ member.name }}</a>{% else %}{{ member.name }}{% endif %}. <i>{{ member.info }}</i>
 {% endfor %}
 </div>
 </div>
