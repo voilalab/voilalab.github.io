@@ -61,6 +61,13 @@
   # researchgate:
   # website:
 
+- name: Julia Nakhleh
+  photo: buzz
+  info: Visiting PhD student
+  notes: Advised by Rob Nowak (UW-Madison)
+  email: jnakhleh@wisc.edu
+
+
 - name: Sungwon Jeong
   photo: sungwon
   info: MS student
@@ -84,7 +91,7 @@
 - name: Merve Kocabas
   photo: buzz
   info: Visiting MS student
-  notes: Advised by Andreas Geiger
+  notes: Advised by Andreas Geiger (Tübingen)
   email: merve.kocabas@student.uni-tuebingen.de
   linkedin: https://tr.linkedin.com/in/merve-kocabaş-69b4b6249
   github: https://github.com/mervekocabas

@@ -52,6 +52,8 @@ In general, I plan to hire 1-2 PhD students per year, but that may fluctuate yea
 
 Please read the <a href="{{ site.url }}{{ site.baseurl }}/prospective.html">Prospective</a> page for detailed instructions before contacting me.
 
+Our lab has a funded PhD fellowship opening (starting Fall 2027) for research in diffusion models for computational imaging, with application to event-based cameras. Due to funder requirements, this fellowship is restricted to US citizens. If interested, please apply to the DSP research area in the ECE PhD program and list me as a potential advisor.
+
 <strong>What strong applicants usually have:</strong> a solid foundation in linear algebra, optimization, signal processing, probability & statistics, and algorithms & data structures. Most projects use Python (including GPU and autodiff libraries like PyTorch, JAX, and CuPy), but familiarity with lower-level languages like CUDA or C++ is a bonus
 </div>
 
