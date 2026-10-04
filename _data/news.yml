@@ -1,3 +1,6 @@
+- date: October 5th, 2026
+  headline: "Sara will be giving a <a href='https://sites.gatech.edu/gsd2026/talks/' target='_blank' rel='noopener noreferrer'>talk</a> at the <a href='https://sites.gatech.edu/gsd2026/' target='_blank' rel='noopener noreferrer'>2026 Georgia Statistics Day</a> on <a href='https://arxiv.org/abs/2605.30330' target='_blank' rel='noopener noreferrer'>a finite-sample lens on when, why, and how diffusion posterior samplers fail</a>."
+
 - date: September 24th, 2026
   headline: "Our paper <a href='https://arxiv.org/abs/2606.00126' target='_blank' rel='noopener noreferrer'>Bounding Global and Local Compression Error of Signal Parameterizations</a> has been accepted to NeurIPS. Congrats Quang!"
 
