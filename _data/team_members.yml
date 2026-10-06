@@ -62,10 +62,13 @@
   # website:
 
 - name: Julia Nakhleh
-  photo: buzz
+  photo: julia
   info: Visiting PhD student
-  notes: Advised by Rob Nowak (UW-Madison)
+  notes: Advised by Robert Nowak (UW-Madison)
   email: jnakhleh@wisc.edu
+  github: https://github.com/julianakhleh
+  website: https://julianakhleh.github.io/
+  scholar: https://scholar.google.com/citations?user=nTPvqN8AAAAJ&hl=en 
 
 
 - name: Sungwon Jeong
