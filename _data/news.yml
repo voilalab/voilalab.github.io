@@ -1,3 +1,9 @@
+- date: October 22nd, 2026
+  headline: "New preprint on going beyond best-of-k evaluation for nonlinear inverse problems, joint with Andreas Geiger, is available on arXiv."
+
+- date: October 22nd, 2026
+  headline: "New preprint on a local out-of-distribution detection framework based on statistical typicality and superpixels, joint with Rohan Sanda, is available on arXiv."
+
 - date: October 5th, 2026
   headline: "Sara will be giving a <a href='https://sites.gatech.edu/gsd2026/talks/' target='_blank' rel='noopener noreferrer'>talk</a> at the <a href='https://sites.gatech.edu/gsd2026/' target='_blank' rel='noopener noreferrer'>2026 Georgia Statistics Day</a> on <a href='https://arxiv.org/abs/2605.30330' target='_blank' rel='noopener noreferrer'>a finite-sample lens on when, why, and how diffusion posterior samplers fail</a>."
 
@@ -8,7 +14,7 @@
   headline: "Sara will be giving a <a href='https://icerm.brown.edu/video_archive/4771' target='_blank' rel='noopener noreferrer'>two-part talk</a> in the <a href='https://icerm.brown.edu/program/topical_workshop/tw-26-m3d' target='_blank' rel='noopener noreferrer'>Mathematics of 3D Reconstruction workshop</a> at ICERM on both <a href='https://arxiv.org/abs/2606.00126' target='_blank' rel='noopener noreferrer'>rate-distortion for compressive signal parameterizations</a> and <a href='https://arxiv.org/abs/2605.30330' target='_blank' rel='noopener noreferrer'>a finite-sample lens on when, why, and how diffusion posterior samplers fail</a>."
 
 - date: June 17th, 2026
-  headline: "Our paper <a href='https://voilalab.github.io/3D-Field-of-Junctions/' target='_blank' rel='noopener noreferrer'>3D Field of Junctions: A Noise-Robust, Training-Free Structural Prior for Volumetric Inverse Problems</a>, joint with <a href='https://ece.gatech.edu/directory/justin-romberg' target='_blank' rel='noopener noreferrer'> Prof. Justin Romberg</a>, has been accepted to ECCV. Congrats Namhoon and Narges!"
+  headline: "Our paper <a href='https://voilalab.github.io/3D-Field-of-Junctions/' target='_blank' rel='noopener noreferrer'>3D Field of Junctions: A Noise-Robust, Training-Free Structural Prior for Volumetric Inverse Problems</a>, joint with Prof. Justin Romberg, has been accepted to ECCV. Congrats Namhoon and Narges!"
 
 - date: June 9th, 2026
   headline: "<a href='https://voilalab.github.io' target='_self' rel='noopener noreferrer'>New website</a> is up!"
