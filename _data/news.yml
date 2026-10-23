@@ -1,8 +1,8 @@
 - date: October 22nd, 2026
-  headline: "New preprint on going beyond best-of-k evaluation for nonlinear inverse problems, joint with Andreas Geiger, is available on arXiv."
+  headline: "New preprint on going beyond best-of-k evaluation for nonlinear inverse problems, joint with Andreas Geiger, <a href='https://arxiv.org/abs/2610.31592' target='_blank' rel='noopener noreferrer'>is available on arXiv</a>."
 
 - date: October 22nd, 2026
-  headline: "New preprint on a local out-of-distribution detection framework based on statistical typicality and superpixels, joint with Rohan Sanda, is available on arXiv."
+  headline: "New preprint on a local out-of-distribution detection framework based on statistical typicality and superpixels, joint with Rohan Sanda, <a href='https://arxiv.org/abs/2610.31538' target='_blank' rel='noopener noreferrer'>is available on arXiv</a>."
 
 - date: October 5th, 2026
   headline: "Sara will be giving a <a href='https://sites.gatech.edu/gsd2026/talks/' target='_blank' rel='noopener noreferrer'>talk</a> at the <a href='https://sites.gatech.edu/gsd2026/' target='_blank' rel='noopener noreferrer'>2026 Georgia Statistics Day</a> on <a href='https://arxiv.org/abs/2605.30330' target='_blank' rel='noopener noreferrer'>a finite-sample lens on when, why, and how diffusion posterior samplers fail</a>."
