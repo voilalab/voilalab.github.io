@@ -459,18 +459,6 @@
                   <date-part prefix=" " name="day"/>
                 </date>
               </if>
-              <else-if type="paper-conference">
-                <!-- Capture 'speech' stored as 'paper-conference' -->
-                <choose>
-                  <if variable="address collection-editor editor editorial-director issue page volume" match="none">
-                    <date variable="issued">
-                      <date-part prefix=", " name="month"/>
-                      <date-part prefix=" " name="day"/>
-                    </date>
-                    <text variable="address"/>
-                  </if>
-                </choose>
-              </else-if>
               <!-- Only year: article article-journal book chapter entry entry-dictionary entry-encyclopedia dataset figure graphic 
                    manuscript map musical_score paper-conference[published] patent report review review-book thesis -->
             </choose>
