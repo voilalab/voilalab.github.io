@@ -97,6 +97,7 @@
   booktitle = {The Fourteenth International Conference on Learning Representations},
   author = {{Fridovich-Keil}, Sara and Pilanci, Mert},
   year = 2026,
+  month = jan,
   url = {https://openreview.net/pdf?id=6UpstNltZ4},
   abstract = {We prove the first guarantees of sparse recovery for ReLU neural networks, where the sparse network weights constitute the signal to be recovered. Specifically, we study structural properties of the sparse network weights for two-layer, scalar-output networks under which a simple iterative hard thresholding algorithm recovers these weights exactly, using memory that grows linearly in the number of nonzero weights. We validate this theoretical result with simple experiments on recovery of sparse planted MLPs, MNIST classification, and implicit neural representations. Experimentally, we find performance that is competitive with, and often exceeds, a high-performing but memory-inefficient baseline based on iterative magnitude pruning. Code is available at https://github.com/voilalab/MLP-IHT.}
 }
@@ -127,6 +128,7 @@
   title = {{{LACToS}}: {{Local}} Anomaly Detection via Conditional Typicality of Superpixels},
   author = {Hong, Jihoon and Kheirandish, Alireza and Sanda, Rohan and {Fridovich-Keil}, Sara},
   year = 2026,
+  month = oct,
   eprint = {2610.31538},
   primaryclass = {cs.CV},
   url = {https://arxiv.org/abs/2610.31538},
@@ -169,11 +171,16 @@
 
 @inproceedings{kim20263d,
   title = {{{3D Field}} of {{Junctions}}: {{A Noise-Robust}}, {{Training-Free Structural Prior}} for {{Volumetric Inverse Problems}}},
-  booktitle = {The 19th {{European Conference}} on {{Computer Vision}}},
+  booktitle = {Computer Vision -- {{ECCV}} 2026},
   author = {Kim, Namhoon and Moeini, Narges and Romberg, Justin and {Fridovich-Keil}, Sara},
+  editor = {Favaro, Paolo and Kukelova, Zuzana and Maki, Atsuto and Rohrbach, Anna and Schindler, Konrad and Tombari, Federico},
   year = 2026,
-  url = {https://arxiv.org/abs/2603.02149},
-  abstract = {Volume denoising is a foundational problem in computational imaging, as many 3D imaging inverse problems face high levels of measurement noise. Inspired by the strong 2D image denoising properties of Field of Junctions (ICCV 2021), we propose a novel, fully volumetric 3D Field of Junctions (3D FoJ) representation that optimizes a junction of 3D wedges that best explain each 3D patch of a full volume, while encouraging consistency between overlapping patches. In addition to direct volume denoising, we leverage our 3D FoJ representation as a structural prior that: (i) requires no training data, and thus precludes the risk of hallucination, (ii) preserves and enhances sharp edge and corner structures in 3D, even under low signal to noise ratio (SNR), and (iii) can be used as a drop-in denoising representation via projected or proximal gradient descent for any volumetric inverse problem with low SNR. We demonstrate successful volume reconstruction and denoising with 3D FoJ across three diverse 3D imaging tasks with low-SNR measurements: low-dose X-ray computed tomography (CT), cryogenic electron tomography (cryo-ET), and denoising point clouds such as those from lidar in adverse weather. Across these challenging low-SNR volumetric imaging problems, 3D FoJ outperforms a mixture of classical and neural methods.}
+  month = sep,
+  pages = {624--642},
+  publisher = {Springer Nature Switzerland},
+  url = {https://link.springer.com/chapter/10.1007/978-3-032-37255-0_34},
+  abstract = {Volume denoising is a foundational problem in computational imaging, as many 3D imaging inverse problems face high levels of measurement noise. Inspired by the strong 2D image denoising properties of Field of Junctions (ICCV 2021), we propose a novel, fully volumetric 3D Field of Junctions (3D FoJ) representation that optimizes a junction of 3D wedges that best explain each 3D patch of a full volume, while encouraging consistency between overlapping patches. In addition to direct volume denoising, we leverage our 3D FoJ representation as a structural prior that: (i) requires no training data, and thus precludes the risk of hallucination, (ii) preserves and enhances sharp edge and corner structures in 3D, even under low signal to noise ratio (SNR), and (iii) can be used as a drop-in denoising representation via projected or proximal gradient descent for any volumetric inverse problem with low SNR. We demonstrate successful volume reconstruction and denoising with 3D FoJ across three diverse 3D imaging tasks with low-SNR measurements: low-dose X-ray computed tomography (CT), cryogenic electron tomography (cryo-ET), and denoising point clouds such as those from lidar in adverse weather. Across these challenging low-SNR volumetric imaging problems, 3D FoJ outperforms the evaluated classical denoisers, untrained neural denoisers, and denoisers trained only on noisy examples. Code is available at https://github.com/voilalab/3D-Field-of-Junctions.},
+  isbn = {978-3-032-37255-0}
 }
 
 @misc{kim2026perfusion,
@@ -192,6 +199,7 @@
   title = {Beyond {{Best}}-of-{{K}}: {{Prior-Consistent DAPS}} for {{Ambiguous Nonlinear Inverse Problems}}},
   author = {Kocabas, Merve and Burns, Benjamin A. and Geiger, Andreas and Gauen, Kent and {Fridovich-Keil}, Sara},
   year = 2026,
+  month = oct,
   eprint = {2610.31592},
   primaryclass = {cs.CV},
   url = {https://arxiv.org/abs/2610.31592},
