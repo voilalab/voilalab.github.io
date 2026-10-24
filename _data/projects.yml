@@ -1,0 +1,8 @@
+# Project pages pulled into this site from other repositories.
+# Each entry is served at /<repository name>/ and built from the pinned `ref`.
+# See PROJECT_PAGES.md. Changing `ref` is how a project page update is deployed.
+#
+# - repo: voilalab/INR-benchmark   # owner/name; page URL is /INR-benchmark/
+#   ref: <40-character commit SHA>
+#   source: docs                   # optional, defaults to docs
+[]

@@ -38,11 +38,6 @@ include:
   - .htaccess
   - _pages
 
-collections:
-  project_pages:
-    output: true
-    permalink: /:name/
-
 # Conversion
 markdown: kramdown
 highlighter: rouge
@@ -119,3 +114,4 @@ exclude:
   - package-lock.json
   - docs
   - scripts
+  - PROJECT_PAGES.md

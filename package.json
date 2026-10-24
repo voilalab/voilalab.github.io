@@ -5,9 +5,14 @@
     "jquery": "^3.7.1"
   },
   "devDependencies": {
-    "pagefind": "^1.1.0"
+    "cheerio": "^1.0.0",
+    "pagefind": "^1.1.0",
+    "postcss": "^8.4.47",
+    "yaml": "^2.6.1"
   },
   "scripts": {
-    "build": "bundle exec jekyll build && npx pagefind --site _site"
+    "projects:import": "node scripts/import-projects.mjs",
+    "projects:check": "node scripts/check-project-updates.mjs",
+    "build": "npm run projects:import && bundle exec jekyll build && npx pagefind --site _site"
   }
 }
