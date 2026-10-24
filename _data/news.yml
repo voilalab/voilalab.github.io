@@ -1,3 +1,6 @@
+- date: October 27th, 2026
+  headline: "Sara will be giving two talks at Asilomar 2026 on <a href='https://cmsworkshops.com/Asilomar2026/view_paper.php?PaperNum=1093' target='_blank' rel='noopener noreferrer'>accurate, provable, and fast nonlinear tomographic reconstruction</a> and on <a href='https://cmsworkshops.com/Asilomar2026/view_paper.php?PaperNum=1095' target='_blank' rel='noopener noreferrer'>rate-distortion for compressive signal parameterizations</a>."
+
 - date: October 22nd, 2026
   headline: "New preprint on going beyond best-of-k evaluation for nonlinear inverse problems, joint with Andreas Geiger, <a href='https://arxiv.org/abs/2610.31592' target='_blank' rel='noopener noreferrer'>is available on arXiv</a>."
 
