@@ -8,8 +8,8 @@
 # Pinned to the authors' PR heads (navbar/footer removal); switch to the merge
 # commits once those PRs land.
 - repo: voilalab/INR-benchmark  # voilalab/INR-benchmark#5
-  ref: 134433b7f65aa21090b7d484963a5e928454771a
+  ref: 2066cda7291bacc79371a1e83857d253c97d8acd
 - repo: voilalab/3D-Field-of-Junctions  # voilalab/3D-Field-of-Junctions#3
-  ref: 074bd9be44e974e3bfe37fcb56145a03911b9fbe
+  ref: 4bd50366bd42f5dfdceeb2b59ca53f1949f42443
 - repo: voilalab/uncertainty_quantification_LPN  # voilalab/uncertainty_quantification_LPN#2
-  ref: 0fc21fdd396a587950ce00ceb0a4b6b26a887075
+  ref: 52ccf3663db737c9e538a69cbbacf524ac594474
