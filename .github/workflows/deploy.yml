@@ -35,8 +35,11 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      # Pulls in project pages at the commits pinned in _data/projects.yml.
       - name: Import project pages
-        run: bundle exec ruby scripts/import_project_pages.rb
+        run: |
+          npm install --no-audit --no-fund
+          npm run projects:import
 
       - name: Build site
         run: bundle exec jekyll build

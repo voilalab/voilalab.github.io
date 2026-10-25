@@ -1,11 +1,12 @@
 ---
 layout: default
 ---
-<article class="col-12 project-page" itemscope itemtype="https://schema.org/ScholarlyArticle">
-  {% include project-hero.html %}
-  {% include project-section-nav.html %}
-  <div class="project-content">
+{%- comment -%}
+  Project pages pulled in by scripts/import-projects.mjs. The project's own CSS
+  is scoped to .voila-project, so it can't affect the site header or footer.
+{%- endcomment -%}
+<div class="col-12 px-0" style="min-width: 0">
+  <div class="voila-project {{ page.project_body_class }}" data-project="{{ page.project_repo }}">
     {{ content }}
   </div>
-</article>
-<script src="{{ '/assets/javascript/project-page.js' | relative_url }}"></script>
+</div>

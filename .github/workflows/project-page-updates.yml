@@ -1,0 +1,32 @@
+name: Check project page updates
+
+# Daily: for each project page in _data/projects.yml, open or update one issue
+# when its docs/ folder has commits past the pinned commit, and close it once
+# the pin catches up. Nothing is deployed; changing the pin is a deliberate PR.
+on:
+  schedule:
+    - cron: '0 13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check for project page changes
+        run: |
+          npm install --no-audit --no-fund
+          npm run projects:check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
