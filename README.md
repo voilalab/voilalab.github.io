@@ -45,10 +45,10 @@ and wraps it in the site's header, footer and styling. The page keeps its old
 URL, `/<repository name>/`. Authors: see [PROJECT_PAGES.md](PROJECT_PAGES.md).
 
 - `_data/projects.yml` lists each project repository and the commit to build.
-  It is empty until a project page is switched over.
 - The deploy workflow runs `npm run projects:import`
-  (`scripts/import-projects.mjs`) before Jekyll. The generated `/<name>/`
-  folders are gitignored.
+  (`scripts/import-projects.mjs`) before Jekyll. It generates
+  `_projects/<name>/` (gitignored), which the `projects` collection in
+  `_config.yml` serves at `/<name>/`.
 - A daily workflow (`.github/workflows/project-page-updates.yml`) opens or
   updates one `project-page-update` issue per project when its `docs/` has
   commits past the pin, and closes it once the pin catches up.
@@ -103,6 +103,7 @@ _includes/           partials used by layouts
 _layouts/            page templates
 _pages/              top-level pages (home, team, research, papers, ...)
 _plugins/            Ruby plugins (news_date_processor.rb)
+_projects/           generated project pages (gitignored; see PROJECT_PAGES.md)
 scripts/             Project page importer and update checker
 _sass/SHB_css.scss   stylesheet
 assets/              ref.bib, main.scss, vendored JS, downloadable PDFs

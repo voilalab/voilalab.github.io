@@ -2,7 +2,8 @@
 // Pulls project pages from other repositories into this site.
 //
 // For each entry in _data/projects.yml, the pinned commit's `docs/` folder is
-// copied to /<repository name>/. Its index.html is turned into a Jekyll page
+// copied to _projects/<repository name>/, which the `projects` collection in
+// _config.yml serves at /<repository name>/. Its index.html is turned into a Jekyll page
 // that uses this site's header, footer and styling (see _layouts/project.html),
 // and its stylesheets are rewritten so their rules only apply inside the page
 // content. See PROJECT_PAGES.md.
@@ -25,6 +26,7 @@ import postcss from "postcss";
 import YAML from "yaml";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const OUT_ROOT = path.join(ROOT, "_projects"); // the `projects` collection
 const WRAPPER = ".voila-project";
 const MARKER = ".project-import"; // marks an output dir as generated
 // IDs the site's own layout uses; project copies are dropped to keep IDs unique.
@@ -139,15 +141,10 @@ function importProject(project, sourceDir) {
 
   // Build in a hidden staging folder and swap it in only once everything has
   // succeeded, so a failed import never leaves a half-written page behind.
-  const finalDir = path.join(ROOT, project.name);
-  const outDir = path.join(ROOT, `.${project.name}.import-tmp`);
+  const finalDir = path.join(OUT_ROOT, project.name);
+  const outDir = path.join(OUT_ROOT, `.${project.name}.import-tmp`);
   const tracked = execFileSync("git", ["ls-files", "--", project.name], { cwd: ROOT, encoding: "utf8" });
   if (tracked.trim()) fail(`${project.name}: /${project.name}/ is already used by tracked files in this site`);
-  try {
-    execFileSync("git", ["check-ignore", "-q", `${project.name}/index.html`], { cwd: ROOT });
-  } catch {
-    fail(`${project.name}: add /${project.name}/ to .gitignore so the generated copy isn't committed`);
-  }
 
   fs.rmSync(outDir, { recursive: true, force: true });
   for (const rel of listFiles(sourceDir)) {
@@ -233,9 +230,9 @@ function importProject(project, sourceDir) {
 
 // Removes generated copies of projects that are no longer imported.
 function removeStale(names) {
-  for (const entry of fs.readdirSync(ROOT, { withFileTypes: true })) {
-    if (entry.isDirectory() && !names.has(entry.name) && fs.existsSync(path.join(ROOT, entry.name, MARKER))) {
-      fs.rmSync(path.join(ROOT, entry.name), { recursive: true, force: true });
+  for (const entry of fs.readdirSync(OUT_ROOT, { withFileTypes: true })) {
+    if (entry.isDirectory() && !names.has(entry.name) && fs.existsSync(path.join(OUT_ROOT, entry.name, MARKER))) {
+      fs.rmSync(path.join(OUT_ROOT, entry.name), { recursive: true, force: true });
       console.log(`Removed stale /${entry.name}/`);
     }
   }
@@ -248,6 +245,7 @@ for (const name of local.keys()) {
 }
 const names = new Set(projects.map((p) => p.name));
 if (names.size !== projects.length) fail("manifest lists the same repository name twice");
+fs.mkdirSync(OUT_ROOT, { recursive: true });
 
 for (const project of projects) {
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "project-import-"));
