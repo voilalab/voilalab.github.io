@@ -38,6 +38,13 @@ include:
   - .htaccess
   - _pages
 
+# Project pages generated into _projects/<repo>/ by scripts/import-projects.mjs,
+# served at /<repo>/ (see PROJECT_PAGES.md).
+collections:
+  projects:
+    output: true
+    permalink: /:path
+
 # Conversion
 markdown: kramdown
 highlighter: rouge
