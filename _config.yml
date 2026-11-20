@@ -69,18 +69,6 @@ plugins:
   - jekyll-scholar
   - jekyll-seo-tag
 
-# Author names to bold in rendered paper citations (match the rendered form).
-bold_names:
-  - "Fridovich-Keil, S."
-  - "Fridovich-Keil, Sara"
-  - "Kim, N."
-  - "Nguyen, Q. L. N."
-  - "Burns, B. A."
-  - "Kheirandish, A."
-  - "Hong, J."
-  - "Kocabas, M."
-  - "Gauen, K."
-
 scholar:
 
   last_name: Fridovich-Keil

@@ -51,10 +51,6 @@ ol li{
 {% capture venue %}<div class="csl-indent">{{ entry.archiveprefix }}:{{ entry.eprint }}</div></span>{% endcapture %}
 {% assign ref = ref | replace_first: '</span>', venue %}
 {% endif %}
-{% for name in site.bold_names %}
-{% capture b %}<b>{{ name }}</b>{% endcapture %}
-{% assign ref = ref | replace_first: name, b %}
-{% endfor %}
 {{ ref }}</div>
 
 <div style="margin-top:4px;">
