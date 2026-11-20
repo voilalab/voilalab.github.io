@@ -32,7 +32,7 @@ fridovich-keil2022spectral:
 fridovich-keil2026recovery:
   code: https://github.com/voilalab/MLP-IHT
 
-fridovich-keilsaraandmeantigiacomo2023kplanes:
+fridovich-keil2023kplanes:
   equal: 2
   code: https://github.com/sarafridov/K-Planes
 
