@@ -28,6 +28,9 @@
 #   short: Plenoxels
 #   summary: Radiance fields on a sparse voxel grid train 100x faster than NeRF, no neural network needed.
 
+roelofs2019metaanalysis:
+  equal: 2
+
 fridovich-keil2018contact:
   code: https://github.com/sarafridov/FingertipVideo
 
@@ -130,6 +133,7 @@ patel2022dabquant:
   code: https://github.com/sarafridov/DAB-quant
   themes: [medical-imaging]
   short: DAB-Quant
+  equal: 2
   summary: An open-source system for quantifying immunohistochemical staining in digital pathology slides.
 
 sanda2025padismria:
@@ -146,11 +150,13 @@ sivgin2025geometric:
   code: https://github.com/sivginirmak/Geometric-Algebra-Planes
   themes: [3d-reconstruction]
   short: GA-Planes
+  equal: 2
   summary: A family of implicit neural volumes whose training can be posed as a convex problem.
 
 tancik2020fourier:
   code: https://github.com/tancik/fourier-feature-networks
   themes: [foundational-ml]
+  equal: 3
 
 vasudevan2022when:
   code: https://github.com/google-research/imagenet-mistakes
