@@ -328,7 +328,7 @@
   <!-- APA references contain four parts: author, date, title, source -->
   <macro name="author-bib">
     <names variable="composer" delimiter=", ">
-      <name name-as-sort-order="all" and="symbol" sort-separator=", " initialize-with=". " delimiter=", " delimiter-precedes-last="always"/>
+      <name and="text" delimiter=", " delimiter-precedes-last="contextual"/>
       <substitute>
         <names variable="author"/>
         <names variable="illustrator"/>
@@ -596,7 +596,7 @@
         <!-- Other types are italicized based on presence of container-title.
              Assume that review and review-book are published in periodicals/blogs,
              not just on a web page (ex. 69) -->
-        <text variable="title"/>
+        <text variable="title" font-style="italic"/>
       </else-if>
       <else>
         <choose>
@@ -1440,27 +1440,17 @@
   <macro name="container-periodical">
     <group delimiter=". ">
       <group delimiter=", ">
-        <text variable="container-title" font-style="italic" text-case="title"/>
+        <text variable="container-title" text-case="title"/>
         <text variable="address"/>
         <choose>
           <if variable="volume">
             <group>
-              <text variable="volume" font-style="italic"/>
+              <text variable="volume"/>
               <text variable="issue" prefix="(" suffix=")"/>
             </group>
           </if>
           <else>
-            <text variable="issue" font-style="italic"/>
-          </else>
-        </choose>
-        <choose>
-          <if variable="page">
-            <text variable="page"/>
-          </if>
-          <else>
-            <!-- Ex. 6: Journal article with article number or eLocator -->
-            <!-- This should be localized -->
-            <text variable="number" prefix="Article "/>
+            <text variable="issue"/>
           </else>
         </choose>
       </group>
@@ -1492,7 +1482,7 @@
                 <names variable="container-author"/>
               </substitute>
             </names>
-            <group delimiter=": " font-style="italic">
+            <group delimiter=": ">
               <text variable="container-title"/>
               <text variable="address"/>
               <!-- Replace with volume-title as that becomes available -->
@@ -1924,17 +1914,18 @@
           </choose>
         </if>
         <else>
-          <group delimiter=" ">
-            <group delimiter=". " suffix=".">
-              <text macro="author-bib"/>
-              <text macro="date-bib"/>
-              <text macro="title-and-descriptions"/>
-              <text macro="container"/>
-              <text macro="event"/>
-              <text macro="publisher"/>
+          <group>
+            <group display="block">
+              <text variable="title"/>
             </group>
-            <text macro="access"/>
-            <text macro="publication-history"/>
+            <group display="block">
+              <text macro="author-bib"/>
+            </group>
+            <!-- Venue line. display="indent" only for a distinct div class (csl-indent);
+                 preprints have no container, so the template adds this line for them -->
+            <group display="indent">
+              <text macro="container"/>
+            </group>
           </group>
         </else>
       </choose>

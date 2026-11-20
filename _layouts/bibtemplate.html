@@ -10,6 +10,8 @@ pre{
     word-wrap: break-word;
     width:100%; overflow-x:auto;
 }
+.pub-entry .csl-block, .pub-entry .csl-indent{ margin:0; padding:0; text-indent:0; }
+.pub-entry .csl-block:first-child{ font-weight:600; }
 ol li{
   padding: 0;
   list-style: none!important;
@@ -44,6 +46,11 @@ ol li{
 <div class="col-sm-10 col-10">
 <div>
 {% assign ref = reference %}
+{% comment %} Preprints have no venue line from the CSL; add one with the arXiv ID. {% endcomment %}
+{% if entry.archiveprefix and entry.eprint %}
+{% capture venue %}<div class="csl-indent">{{ entry.archiveprefix }}:{{ entry.eprint }}</div></span>{% endcapture %}
+{% assign ref = ref | replace_first: '</span>', venue %}
+{% endif %}
 {% for name in site.bold_names %}
 {% capture b %}<b>{{ name }}</b>{% endcapture %}
 {% assign ref = ref | replace_first: name, b %}
