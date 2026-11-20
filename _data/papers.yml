@@ -1,6 +1,8 @@
-# Presentation-only metadata for the papers page, merged into _layouts/bibtemplate.html
-# by bib citation key (entry.key). All fields optional. Keys must match ref.bib exactly.
+# Per-paper metadata, keyed by bib citation key (entry.key). All fields optional.
+# Keys must match ref.bib exactly. Used by the papers page (_layouts/bibtemplate.html)
+# and the research page (_pages/research.md, via _plugins/research_papers.rb).
 #
+# Papers page:
 #   code:     GitHub repo URL -> renders a CODE button
 #   project:  Project-page URL -> renders a PROJECT button
 #   equal:    N -> marks the first N authors as equal contribution (co-first) with *
@@ -9,9 +11,22 @@
 #          their archiveprefix field, and article/inproceedings/report get JOURNAL/
 #          CONFERENCE/REPORT from their bib type.
 #
+# Research page:
+#   themes:   research.yml theme slugs this paper belongs to. Tagged papers count
+#             towards the theme's "all N papers" link and filter on the papers page.
+#   featured: true -> always shown on its themes' cards (major work). Other tagged
+#             papers are shown only while recent; see `selection` in research.yml.
+#   short:    short name shown on the card (defaults to the bib title)
+#   summary:  one sentence on what the paper shows, shown under the name
+#   venue:    override for the short venue label (normally derived from ref.bib)
+#
 # Example:
 # plenoxels:
 #   code: https://github.com/sxyu/svox2
+#   themes: [3d-reconstruction]
+#   featured: true
+#   short: Plenoxels
+#   summary: Radiance fields on a sparse voxel grid train 100x faster than NeRF, no neural network needed.
 
 fridovich-keil2018contact:
   code: https://github.com/sarafridov/FingertipVideo
@@ -21,96 +36,188 @@ fridovich-keil2022approximately:
 
 fridovich-keil2022models:
   code: https://github.com/sarafridov/RobustNets
+  themes: [ood]
+  featured: true
+  short: Models out of Line
+  summary: A Fourier-domain view of why some models are more robust to distribution shift than others.
 
 fridovich-keil2022plenoxels:
   equal: 2
   code: https://github.com/sxyu/svox2
+  themes: [3d-reconstruction]
+  featured: true
+  short: Plenoxels
+  summary: Radiance fields on a sparse voxel grid train two orders of magnitude faster than NeRF, with no neural network.
 
 fridovich-keil2022spectral:
   code: https://github.com/google-research/google-research/tree/master/spectral_bias
+  themes: [foundational-ml]
+  featured: true
+  short: Spectral Bias in Practice
+  summary: Measures how the frequency content of learned functions shapes generalization in real networks.
+
+fridovich-keil2026gradient:
+  themes: [medical-imaging]
+  featured: true
+  short: Provable Tomographic Reconstruction
+  summary: Gradient descent provably solves nonlinear tomographic reconstruction, despite nonconvexity.
 
 fridovich-keil2026recovery:
   code: https://github.com/voilalab/MLP-IHT
+  themes: [foundational-ml]
+  short: Sparse Neural Network Recovery
+  summary: A recovery guarantee for learning sparse neural network weights by iterative hard thresholding.
 
-fridovich-keilsaraandmeantigiacomo2023kplanes:
+fridovich-keil2023kplanes:
   equal: 2
   code: https://github.com/sarafridov/K-Planes
+  themes: [3d-reconstruction]
+  featured: true
+  short: K-Planes
+  summary: Factorizes dynamic scenes into planes over space, time and appearance for fast, interpretable 4D radiance fields.
 
 ghosh2023volumetric:
   code: https://github.com/sarafridov/volumetric-propeller
+  themes: [medical-imaging]
+  short: Volumetric PROPELLER MRI
+  summary: Lifts 2D MRI reconstruction to 3D with a spectral dimension to resolve off-resonance artifacts.
 
 kim2025distributionshift:
   code: https://github.com/voilalab/uncertainty_quantification_LPN
   project: https://voilalab.github.io/uncertainty_quantification_LPN/
+  themes: [generative-priors, ood]
+  short: Distribution-Shift Uncertainty
+  summary: Estimates when a generative prior's reconstruction is unreliable because the measured object is out of distribution.
 
 kim2025grids:
   code: https://github.com/voilalab/INR-benchmark
   project: https://voilalab.github.io/INR-benchmark/
+  themes: [3d-reconstruction, foundational-ml]
+  short: Grids vs. INRs
+  summary: A benchmark showing simple grids often beat implicit neural representations at compressing dense signals.
 
 kim2026perfusion:
   code: https://github.com/voilalab/VI-PRISM
+  themes: [medical-imaging]
+  short: Perfusion Photon-Counting CT
+  summary: Adapts a provable variational-inequality solver to low-dose perfusion imaging in photon-counting CT.
 
 levy2025solving:
   code: https://github.com/axel-levy/axlevy-adp-3d
+  themes: [generative-priors]
+  short: Protein-Space Inverse Problems
+  summary: Combines physics-based forward models with a protein diffusion prior to turn measurements like cryo-EM maps into atomic models.
 
 lin2024thermalnerf:
   code: https://github.com/yvette256/nerfstudio-thermal
+  themes: [3d-reconstruction]
+  short: ThermalNeRF
+  summary: Joint radiance fields from thermal and visible cameras for 3D scene reconstruction in the infrared.
 
 lou2026accurate:
   code: https://github.com/voilalab/exact
+  themes: [medical-imaging]
+  short: Fast Polychromatic CT
+  summary: A variational-inequality approach to polychromatic CT reconstruction that is accurate, provable and fast.
 
 mai2023neural:
   code: https://github.com/half-potato/nmf
+  themes: [3d-reconstruction]
+  short: Neural Microfacet Fields
+  summary: Recovers materials, geometry and illumination by treating each volume sample as a microfacet surface.
 
 patel2022dabquant:
   code: https://github.com/sarafridov/DAB-quant
+  themes: [medical-imaging]
+  short: DAB-Quant
+  summary: An open-source system for quantifying immunohistochemical staining in digital pathology slides.
 
 sanda2025padismria:
   code: https://github.com/voilalab/PaDIS-MRI
+  themes: [medical-imaging, generative-priors]
+  short: PaDIS-MRI
+  summary: Patch-based diffusion priors trained on little data give MRI reconstructions radiologists prefer.
 
 shankar2020neural:
   code: https://github.com/modestyachts/neural_kernels_code
+  themes: [foundational-ml]
 
 sivgin2025geometric:
   code: https://github.com/sivginirmak/Geometric-Algebra-Planes
+  themes: [3d-reconstruction]
+  short: GA-Planes
+  summary: A family of implicit neural volumes whose training can be posed as a convex problem.
 
 tancik2020fourier:
   code: https://github.com/tancik/fourier-feature-networks
+  themes: [foundational-ml]
 
 vasudevan2022when:
   code: https://github.com/google-research/imagenet-mistakes
+  themes: [ood]
+  short: Mistakes on ImageNet
+  summary: Expert review of the errors top ImageNet models still make, and what they say about the benchmark.
 
 kim20263d:
   code: https://github.com/voilalab/3D-Field-of-Junctions
   project: https://voilalab.github.io/3D-Field-of-Junctions/
   equal: 2
+  themes: [3d-reconstruction]
+  short: 3D Field of Junctions
+  summary: A training-free, noise-robust structural prior for volumes that preserves sharp edges and corners.
 
 burns2026when:
   code: https://github.com/voilalab/diagnosing-posterior-sampling
+  themes: [generative-priors]
+  featured: true
+  short: When Do Posterior Samplers Fail?
+  summary: A finite-sample lens on how likelihood approximations in diffusion posterior samplers lead to wrong posteriors.
 
 nguyen2026bounding:
   code: https://github.com/voilalab/global_error_bound
+  themes: [3d-reconstruction, foundational-ml]
+  short: Compression Error Bounds
+  summary: Bounds on the global and local error of compressing signals with grid and neural parameterizations.
 
 kheirandish2026klip:
   code: https://github.com/voilalab/KLIP
   equal: 2
+  themes: [generative-priors, ood]
+  short: KLIP
+  summary: Localizes distribution shift in inverse problems with a KL-divergence test under a diffusion prior.
 
 kocabas2026bestofk:
   code: https://github.com/voilalab/PC-DAPS
   project: https://mervekocabas.github.io/PCDAPS/
   equal: 2
+  featured: true
+  themes: [generative-priors]
+  short: Prior-Consistent DAPS
+  summary: Keeps diffusion samplers on prior-supported modes for ambiguous nonlinear problems like phase retrieval, without best-of-k selection.
 
 hong2026lactos:
   code: https://github.com/voilalab/LACToS
   equal: 2
+  themes: [ood]
+  short: LACToS
+  summary: Detects local anomalies via the statistical typicality of superpixels, even when normal images are multimodal.
 
 lin2026datadriven:
   code: https://github.com/voilalab/varlen-3D
   equal: 2
+  themes: [3d-reconstruction]
+  short: Variable-Length 3D Compression
+  summary: Learned compression of meshes and SDFs that adapts its size to each shape's complexity.
 
 kheirandish2026supportguided:
   code: https://github.com/voilalab/sord
+  themes: [generative-priors, ood]
+  short: SORD
+  summary: Removes localized out-of-distribution corruptions using only their support mask and a diffusion model trained on clean data.
 
 li2026sparse:
   code: https://github.com/shamus-li/lightfield-gaussian-splatting
   project: https://shamus.li/lightfield-gaussian-splatting/
+  themes: [3d-reconstruction]
+  short: Sparse Light Field Sampling
+  summary: Sparse light-field capture improves casual 3D and 4D reconstruction.

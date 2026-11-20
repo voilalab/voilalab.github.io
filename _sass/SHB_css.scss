@@ -736,40 +736,83 @@ div[style*="border-left: 4px solid #c0995e"] {
   padding-top: 10px;
 }
 
-.research-pubs {
+.research-papers-label {
   display: block;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--text-muted);
-  margin-bottom: 8px;
-
-  i { margin-right: 4px; font-size: 0.65rem; }
+  margin-bottom: 6px;
 }
 
-.research-links {
+.research-papers {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.research-paper {
+  margin-bottom: 11px;
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.research-paper-name {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-primary);
+
+  &:hover { color: var(--gold); }
+}
+
+.research-paper-meta {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 6px;
+  margin: 2px 0 2px;
 }
 
-.research-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 0.72rem;
+.research-paper-venue {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-right: 3px;
+}
+
+.research-paper-icon {
+  font-size: 0.8rem;
+  line-height: 1;
+  color: var(--text-muted);
+  padding: 0 2px;
+  transition: color var(--transition);
+
+  &:hover { color: var(--gold); text-decoration: none; }
+}
+
+.research-paper-summary {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 1px 0 0;
+}
+
+.research-all {
+  font-size: 0.78rem;
   font-weight: 500;
   color: var(--gold);
-  padding: 2px 9px;
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  transition: border-color var(--transition), background-color var(--transition);
 
-  &:hover {
-    border-color: var(--gold);
-    background: rgba(192, 153, 94, 0.08);
-    text-decoration: none;
-  }
+  i { font-size: 0.65rem; margin-left: 3px; }
+}
 
-  i { font-size: 0.7rem; }
+.papers-filter-note {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+
+  a { margin-left: 6px; }
 }
 
 @media (max-width: 767px) {

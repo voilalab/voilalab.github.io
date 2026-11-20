@@ -1,3 +1,13 @@
+# Research themes shown as cards on /research/. Which papers appear on each card is
+# set by tagging papers in papers.yml (`themes`, `featured`), not here.
+#
+# selection:
+#   max_per_theme: most papers listed on a card (featured papers always shown)
+#   recent_years:  papers from the last N years (counting this one) count as recent
+selection:
+  max_per_theme: 4
+  recent_years: 2
+
 themes:
   - slug: 3d-reconstruction
     title: "3D reconstruction and representation"
@@ -7,15 +17,6 @@ themes:
     # bullets:
     #   - "A"
     #   - "B"
-    papers:
-      - {text: "Grids vs INRs", key: kim2025grids}
-      - {text: "Plenoxels", key: fridovich-keil2022plenoxels}
-      - {text: "K-Planes", key: fridovich-keilsaraandmeantigiacomo2023kplanes}
-      - {text: "ThermalNeRF", key: lin2024thermalnerf}
-      - {text: "Neural Microfacet Fields", key: mai2023neural}
-      - {text: "3D Field of Junctions", key: kim20263d}
-      - {text: "GA-Planes", key: sivgin2025geometric}
-      - {text: "Compression Error Bounds", key: nguyen2026bounding}
 
   - slug: medical-imaging
     title: Medical imaging
@@ -25,13 +26,6 @@ themes:
     # bullets:
     #   - "A"
     #   - "B"
-    papers:
-      - {text: "PaDIS-MRI", key: sanda2025padismria}
-      - {text: "Provable TR", key: fridovich-keil2026gradient}
-      - {text: "Probable, Fast TR", key: lou2026accurate}
-      - {text: "Propeller MRI", key: ghosh2023volumetric}
-      - {text: "Perfusion Photon-Counting CT", key: kim2026perfusion}
-      - {text: "DAB-quant", key: patel2022dabquant}
 
   - slug: foundational-ml
     title: Machine learning foundations
@@ -41,11 +35,6 @@ themes:
     # bullets:
     #   - "A"
     #   - "B"
-    papers:
-      - {text: "Spectral Bias", key: fridovich-keil2022spectral}
-      - {text: "Sparse NN Recovery", key: fridovich-keil2026recovery}
-      - {text: "Grids vs INRs", key: kim2025grids}
-      - {text: "Compression Error Bounds", key: nguyen2026bounding}
 
   - slug: generative-priors
     title: Generative priors for inverse problems
@@ -55,12 +44,6 @@ themes:
     # bullets:
     #   - "A"
     #   - "B"
-    papers:
-      - {text: "PaDIS-MRI", key: sanda2025padismria}
-      - {text: "Distribution-Shift Uncertainty", key: kim2025distributionshift}
-      - {text: "Protein-Space Inverse Problems", key: levy2025solving}
-      - {text: "Failures in DPS", key: burns2026when}
-      - {text: "KLIP", key: kheirandish2026klip}
 
   - slug: ood
     title: Identifying and tackling distribution shift
@@ -70,11 +53,6 @@ themes:
     # bullets:
     #   - "A"
     #   - "B"
-    papers:
-      - {text: "Fourier Lens on Robustness", key: fridovich-keil2022models}
-      - {text: "Mistakes on ImageNet", key: vasudevan2022when}
-      - {text: "Distribution-Shift Uncertainty", key: kim2025distributionshift}
-      - {text: "KLIP", key: kheirandish2026klip}
 
   # - slug: 
   #   title:
@@ -84,5 +62,3 @@ themes:
   #   bullets:
   #     - "A"
   #     - "B"
-  #   papers:
-  #     - {text: "", key: ""}
