@@ -3,6 +3,7 @@
 #
 #   code:     GitHub repo URL -> renders a CODE button
 #   project:  Project-page URL -> renders a PROJECT button
+#   equal:    N -> marks the first N authors as equal contribution (co-first) with *
 #   badge: explicit override for the left-column pill label (e.g. "PREPRINT").
 #          Normally unnecessary: arXiv entries get a PREPRINT badge automatically from
 #          their archiveprefix field, and article/inproceedings/report get JOURNAL/
@@ -22,6 +23,7 @@ fridovich-keil2022models:
   code: https://github.com/sarafridov/RobustNets
 
 fridovich-keil2022plenoxels:
+  equal: 2
   code: https://github.com/sxyu/svox2
 
 fridovich-keil2022spectral:
@@ -31,6 +33,7 @@ fridovich-keil2026recovery:
   code: https://github.com/voilalab/MLP-IHT
 
 fridovich-keilsaraandmeantigiacomo2023kplanes:
+  equal: 2
   code: https://github.com/sarafridov/K-Planes
 
 ghosh2023volumetric:
@@ -80,6 +83,7 @@ vasudevan2022when:
 kim20263d:
   code: https://github.com/voilalab/3D-Field-of-Junctions
   project: https://voilalab.github.io/3D-Field-of-Junctions/
+  equal: 2
 
 burns2026when:
   code: https://github.com/voilalab/diagnosing-posterior-sampling
@@ -89,10 +93,24 @@ nguyen2026bounding:
 
 kheirandish2026klip:
   code: https://github.com/voilalab/KLIP
+  equal: 2
 
 kocabas2026bestofk:
   code: https://github.com/voilalab/PC-DAPS
   project: https://mervekocabas.github.io/PCDAPS/
+  equal: 2
 
 hong2026lactos:
   code: https://github.com/voilalab/LACToS
+  equal: 2
+
+lin2026datadriven:
+  code: https://github.com/voilalab/varlen-3D
+  equal: 2
+
+kheirandish2026supportguided:
+  code: https://github.com/voilalab/sord
+
+li2026sparse:
+  code: https://github.com/shamus-li/lightfield-gaussian-splatting
+  project: https://shamus.li/lightfield-gaussian-splatting/
