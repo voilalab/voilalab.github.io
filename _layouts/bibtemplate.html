@@ -52,6 +52,16 @@ ol li{
 {% capture venue %}<div class="csl-indent">{{ entry.archiveprefix }}:{{ entry.eprint }}</div></span>{% endcapture %}
 {% assign ref = ref | replace_first: '</span>', venue %}
 {% endif %}
+{% comment %} Mobile shows a short venue label ("NeurIPS") in place of the full name; see _plugins/venue.rb. {% endcomment %}
+{% unless entry.archiveprefix %}
+{% assign venue_short = entry.booktitle | default: entry.journal | short_venue %}
+{% if venue_short != "" %}
+{% assign venue_full = ref | split: '<div class="csl-indent">' | last | split: '</div>' | first %}
+{% capture venue_old %}<div class="csl-indent">{{ venue_full }}</div>{% endcapture %}
+{% capture venue_new %}<div class="csl-indent"><span class="venue-full">{{ venue_full }}</span><span class="venue-short">{{ venue_short }}</span></div>{% endcapture %}
+{% assign ref = ref | replace_first: venue_old, venue_new %}
+{% endif %}
+{% endunless %}
 {% comment %} Co-first authors: papers.yml `equal: N` marks the first N authors. {% endcomment %}
 {% if extra.equal %}
 {% assign authors = ref | split: '<div class="csl-block">' %}
