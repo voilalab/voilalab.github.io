@@ -6,7 +6,6 @@
   github: https://github.com/gauenk
   website: https://gauenk.github.io/
   scholar: https://scholar.google.com/citations?user=CRbbyHMAAAAJ&hl=en
-  # researchgate:
 
 - name: Namhoon Kim
   photo: namhoon
@@ -16,7 +15,6 @@
   github: https://github.com/etoilekim
   website: https://etoilekim.github.io/
   scholar: https://scholar.google.com/citations?user=OXpGAvAAAAAJ&hl=en
-  # researchgate:
 
 - name: Ben Burns
   photo: ben
@@ -27,7 +25,6 @@
   github: https://github.com/bburns-ds
   website: https://bburns.xyz
   scholar: https://scholar.google.com/citations?hl=en&user=-lgOdYcAAAAJ
-  # researchgate:
 
 - name: Jihoon Hong
   photo: jihoon
@@ -38,7 +35,6 @@
   github: https://github.com/athlon76
   website: https://athlon76.github.io/
   scholar: https://scholar.google.com/citations?user=MXyixOIAAAAJ&hl=en
-  # researchgate:
 
 - name: Alireza Kheirandish
   photo: al
@@ -49,7 +45,6 @@
   github: https://github.com/KheirAli
   website: https://kheirali.github.io/
   scholar: https://scholar.google.com/citations?user=-9IKjn8AAAAJ&hl=en
-  # researchgate:
 
 - name: Quang Nguyen
   photo: quang
@@ -57,19 +52,18 @@
   email: qnguyen95@gatech.edu
   linkedin: https://www.linkedin.com/in/quang-nguyenln/
   github: https://github.com/quang-nguyenln
-  scholar: https://scholar.google.com/citations?user=6UOb7cQAAAAJ&hl=en
-  # researchgate:
   # website:
+  scholar: https://scholar.google.com/citations?user=6UOb7cQAAAAJ&hl=en
 
 - name: Julia Nakhleh
   photo: julia
   info: Visiting PhD student
   notes: Advised by Robert Nowak (UW-Madison)
   email: jnakhleh@wisc.edu
+  # linkedin:
   github: https://github.com/julianakhleh
   website: https://julianakhleh.github.io/
   scholar: https://scholar.google.com/citations?user=nTPvqN8AAAAJ&hl=en 
-
 
 - name: Sungwon Jeong
   photo: sungwon
@@ -79,17 +73,6 @@
   github: https://github.com/sjeong304
   # scholar:
   # website:
-  # researchgate:
-
-# - name: Aditya Pandey
-#   photo: buzz
-#   info: MS student
-#   email: apandey369@gatech.edu
-#   # linkedin:
-#   # github:
-#   # website:
-#   # scholar:
-#   # researchgate:
 
 - name: Merve Kocabas
   photo: buzz
@@ -100,9 +83,12 @@
   github: https://github.com/mervekocabas
   website: https://mervekocabas.github.io/
   scholar: https://scholar.google.com/citations?hl=en&user=LyMbgOYAAAAJ
-  # researchgate:
 
 - name: Ayush Shah
   photo: ayush
   info: Undergrad student
   email: ashah884@gatech.edu
+  # linkedin:
+  # github:
+  # website:
+  # scholar:
