@@ -17,17 +17,6 @@ module Jekyll
     safe true
     priority :normal
 
-    VENUES = [
-      [/\(([A-Z][A-Za-z0-9]+)(?: \d{4})?\)/, nil], # acronym in parentheses: "(CVPR)", "(ECCV 2026)"
-      [/Neural Information Processing Systems/i, 'NeurIPS'],
-      [/International Conference on Machine Learning/i, 'ICML'],
-      [/Conference on Learning Representations/i, 'ICLR'],
-      [/Machine Learning for Health/i, 'ML4H'],
-      [/Transactions on Information Theory/i, 'IEEE Trans. Inf. Theory'],
-      [/SIAM Journal on Imaging Sciences/i, 'SIAM J. Imaging Sci.'],
-      [/PLOS ONE/i, 'PLOS ONE'],
-    ].freeze
-
     def generate(site)
       papers = site.data['papers'] ||= {}
       research = site.data['research']
@@ -91,12 +80,8 @@ module Jekyll
 
     def venue(entry)
       return 'Preprint' if entry[:archiveprefix] || (entry[:booktitle].nil? && entry[:journal].nil?)
-      name = clean(entry[:booktitle] || entry[:journal])
-      VENUES.each do |pattern, label|
-        m = name.match(pattern)
-        return label || m[1] if m
-      end
-      name
+      name = entry[:booktitle] || entry[:journal]
+      Venue.short(name) || clean(name)
     end
   end
 end

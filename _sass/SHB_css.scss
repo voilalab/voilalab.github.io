@@ -932,6 +932,9 @@ a:hover .fa-2x, a:hover .ai-2x {
     padding-bottom: 0;
     margin-bottom: 0;
   }
+
+  // Short venue label, swapped in for the full name on mobile (see Mobile below)
+  .venue-short { display: none; }
 }
 
 // Type badge pills on papers page
@@ -1024,6 +1027,9 @@ a:hover .fa-2x, a:hover .ai-2x {
     font-size: 0.9rem;
     line-height: 1.45;
   }
+
+  .pub-entry .venue-full { display: none; }
+  .pub-entry .venue-short { display: inline; }
 
   iframe {
     max-width: 100%;
